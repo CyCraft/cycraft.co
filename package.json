@@ -1,0 +1,24 @@
+{
+  "name": "cycraft.co",
+  "version": "0.0.0",
+  "description": "CyCraft website",
+  "main": "index.js",
+  "scripts": {
+    "build": "vuepress build docs",
+    "dev": "vuepress dev docs",
+    "deploy": "firebase use cycraft-co && firebase deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CyCraft/cycraft.co.git"
+  },
+  "author": "Luca Ban - Mesqueeb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CyCraft/cycraft.co/issues"
+  },
+  "homepage": "https://github.com/CyCraft/cycraft.co#readme",
+  "devDependencies": {
+    "vuepress": "^1.2.0"
+  }
+}

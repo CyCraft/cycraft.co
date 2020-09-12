@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/CyCraft/cycraft.co#readme",
   "devDependencies": {
+    "npm-check-updates": "^9.0.1",
     "vuepress": "^1.2.0"
   }
 }

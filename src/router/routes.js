@@ -8,6 +8,10 @@ const routes = [
     path: '/dev',
     component: () => import('pages/Dev.vue'),
   },
+  {
+    path: '/typo',
+    component: () => import('pages/TypographyExpose.vue'),
+  },
 
   // Always leave this as last one,
   // but you can also remove it

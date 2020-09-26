@@ -1,7 +1,7 @@
  <template>
   <div class="example pa-md" style="width: 400px">
     <div class="text-h6 text-white pb-md">Example on a dark background</div>
-    <TitleSeparator> Example Title </TitleSeparator>
+    <TitleSeparator>PopIcons</TitleSeparator>
   </div>
 </template>
 

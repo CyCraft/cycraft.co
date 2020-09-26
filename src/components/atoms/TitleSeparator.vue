@@ -19,7 +19,7 @@ h5 {
   text-transform: uppercase;
 }
 h5 span {
-  margin: 0 5px;
+  margin: 0 6px;
 }
 
 h5:after {

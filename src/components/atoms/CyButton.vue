@@ -1,26 +1,22 @@
 <template>
   <button :class="`cy-button cy-button--${kind}`">
-    <h5>
+    <div class="_button-text">
       <img
         src="cy-icon-black-transparent.svg"
         width="16"
         style="vertical-align: middle; margin-right: 8px; margin-bottom: 2px"
       />{{ buttonLabel }}
-    </h5>
+    </div>
   </button>
 </template>
 
 <style lang="sass" scoped>
 // $
-h5
+._button-text
+  +t-h5()
   margin-top: 10px
   margin-bottom: 10px
-  font-family: Montserrat, sans-serif
   color: black
-  font-size: 14px
-  line-height: 18px
-  font-weight: 700
-  letter-spacing: 1.12px
   text-transform: uppercase
 
 .cy-button
@@ -28,7 +24,9 @@ h5
   border-color: black
   border-width: 1px
   background-color: white
-  padding: 6px 16px
+  outline: none
+  +py(6px)
+  +px($md)
   cursor: pointer
   &--sm
     font-size: $sm

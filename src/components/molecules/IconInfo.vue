@@ -89,10 +89,6 @@
   width: 24px
   height: 24px
   stroke: #9a7aec
-  -webkit-transition: all 0.5s ease
-  -moz-transition: all 0.5s ease
-  -o-transition: all 0.5s ease
-  -ms-transition: all 0.5s ease
   transition: all 0.5s ease
 .icon-expanded
   margin-right: 14px
@@ -146,10 +142,6 @@
   display: flex
   justify-content: center
   align-items: center
-  -webkit-transition: all 1s ease
-  -moz-transition: all 1s ease
-  -o-transition: all 1s ease
-  -ms-transition: all 1s ease
   transition: all 1s ease
 .icon-info-top-transform
   transform: translateY(-296px)
@@ -164,10 +156,6 @@
   font-weight: 800
   color: black
   font-size: 24px
-  -webkit-transition: all 0.75s ease
-  -moz-transition: all 0.5 ease
-  -o-transition: all 0.75s ease
-  -ms-transition: all 0.75s ease
   transition: all 0.75s ease
 .icon-info-bottom-transform
   transform: translateY(182px)

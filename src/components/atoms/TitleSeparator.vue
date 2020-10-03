@@ -1,37 +1,36 @@
 <template>
-  <h5 class="right">
+  <div class="title-container" :class="[textsm ? 'text-sm' : 'text-md']">
     <span><slot></slot></span>
-  </h5>
+    <div class="line"></div>
+  </div>
 </template>
-<style scoped>
-h5 {
-  color: #fff;
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-family: Montserrat, sans-serif;
-  color: #fff;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 700;
-  letter-spacing: 1.12px;
-  text-transform: uppercase;
-}
-h5 span {
-  margin: 0 6px;
-}
-
-h5:after {
-  background: white;
-  height: 1px;
-  flex: 1;
-  content: '';
-}
-h5.left:after {
-  background: none;
-}
-h5.right:before {
-  background: none;
-}
+<style lang="sass" scoped>
+//$
+.text-md
+  +t-h5()
+  color: #fff
+.text-sm
+  +t-h5()
+  color: #fff
+  font-size: 11px
+  line-height: 15px
+.title-container
+  display: flex
+  align-items: center
+.line
+  background: white
+  height: 1px
+  margin-left: 6px
+  width: 100%
 </style>
+<script>
+export default {
+  name: 'TitleSeparator',
+  props: {
+    textsm: {
+      type: Boolean,
+      default: false,
+    },
+  },
+}
+</script>

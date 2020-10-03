@@ -1,7 +1,12 @@
  <template>
   <div class="example pa-md" style="width: 400px">
-    <div class="text-h6 text-white pb-md">Example on a dark background</div>
+    <div class="text-h6 text-white pb-md">Examples on a dark background</div>
+    <div class="body1 text-white">Medium text size</div>
+
     <TitleSeparator>PopIcons</TitleSeparator>
+    <div class="body1 text-white">Small text size</div>
+
+    <TitleSeparator textsm>PopIcons</TitleSeparator>
   </div>
 </template>
 

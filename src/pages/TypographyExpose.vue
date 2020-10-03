@@ -37,13 +37,13 @@
         </div>
       </div>
       <div class="title-holder">
-        <p class="body1">Body 1</p>
+        <div class="text-body1">Body 1</div>
         <div class="title-label">
           Montserrat Medium, 14px &vert; LetterSpacing: 10 &vert; LineHeight: 18px
         </div>
       </div>
       <div class="title-holder">
-        <p class="body2">Body 2</p>
+        <div class="text-body2">Body 2</div>
         <div class="title-label">
           Montserrat Medium, 12px &vert; LetterSpacing: 20 &vert; LineHeight: 15px
         </div>
@@ -51,119 +51,48 @@
     </div>
   </div>
 </template>
-<style scoped>
-h1 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-family: Montserrat, sans-serif;
-  color: #fff;
-  font-size: 48px;
-  line-height: 58px;
-  font-weight: 800;
-  letter-spacing: 0.96px;
-  text-transform: uppercase;
-}
+<style lang="sass" scoped>
+//$
+h1
+  color: #fff
+h2
+  color: #fff
+h3
+  color: #fff
+h4
+  color: #fff
+h5
+  color: #fff
+h6
+  color: #fff
+.text-body1
+  color: #fff
+.text-body2
+  color: #fff
+.background-black
+  background: black
 
-h2 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-family: Montserrat, sans-serif;
-  color: #fff;
-  font-size: 40px;
-  line-height: 49px;
-  font-weight: 500;
-  letter-spacing: 0.4px;
-}
+.page-title
+  font-size: 40px
+  font-weight: 400
+  font-family: Roboto, sans-serif
+  color: #fff
+  margin-left: 10vh
 
-h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-family: Montserrat, sans-serif;
-  color: #fff;
-  font-size: 20px;
-  line-height: 28px;
-  font-weight: 700;
-  letter-spacing: 1.6px;
-  text-transform: uppercase;
-}
+.title-holder
+  margin-bottom: 10px
+  padding: 10px 10px 20px
 
-h4 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-family: Montserrat, sans-serif;
-  color: #fff;
-  font-size: 20px;
-  line-height: 28px;
-  font-weight: 500;
-  letter-spacing: 0.2px;
-}
+.title-divider
+  width: 100%
+  height: 1px
+  background-color: #fff
 
-h5 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-family: Montserrat, sans-serif;
-  color: #fff;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 700;
-  letter-spacing: 1.12px;
-  text-transform: uppercase;
-}
-
-h6 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-family: Montserrat, sans-serif;
-  color: #fff;
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: 700;
-}
-p {
-  margin-bottom: 10px;
-  font-family: Montserrat, sans-serif;
-}
-.body1 {
-  line-height: 18px;
-  font-weight: 500;
-  letter-spacing: 0.14px;
-  font-family: Montserrat, sans-serif;
-  color: #fff;
-}
-
-.body2 {
-  font-size: 12px;
-  line-height: 15px;
-  font-weight: 500;
-  letter-spacing: 0.24px;
-  font-family: Montserrat, sans-serif;
-  color: #fff;
-}
-.background-black {
-  background: black;
-}
-.page-title {
-  font-size: 40px;
-  font-weight: 400;
-  font-family: Roboto, sans-serif;
-  color: #fff;
-  margin-left: 10vh;
-}
-.title-holder {
-  margin-bottom: 10px;
-  padding: 10px 10px 20px;
-}
-.title-divider {
-  width: 100%;
-  height: 1px;
-  background-color: #fff;
-}
-.title-label {
-  margin-top: 10px;
-  font-family: Montserrat, sans-serif;
-  color: #fff;
-  font-size: 13px;
-  line-height: 13px;
-  letter-spacing: 1px;
-}
+.title-label
+  +header-globals()
+  margin-top: 10px
+  color: #fff
+  font-size: 13px
+  line-height: 13px
+  letter-spacing: 1px
 </style>

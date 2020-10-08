@@ -13,12 +13,22 @@ $colors: ("primary": $c-primary, "secondary": $c-secondary, "accent": $c-accent,
 .bg-none
   background: none !important
 
+/**
+ * Color mixin to be used like:
+ * +c(color, primary)
+ * +c(background, secondary)
+ */
+=c($attr, $color-name)
+  #{$attr}: map-get($colors, $color-name)
+  #{$attr}: var(--q-color-#{$color-name})
+
+\:root
+  @each $name, $color in $colors
+    --q-color-#{$name}: #{$color}
+
 @each $name, $color in $colors
   .bg-#{$name}
-    background: $color
+    +c(background, $name)
+  .text-#{$name},
   .c-#{$name}
-    color: $color
-  .text-#{$name}
-    color: $color
-  \:root
-    --q-color-#{$name}: #{$color}
+    +c(color, $name)

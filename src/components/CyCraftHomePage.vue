@@ -26,14 +26,14 @@
         <!-- Title Text & Button-->
         <div class="flex-col pt-10 px-10 mt-16 sm:mt-32 sm:mr-4">
           <div class="landing-page-title" style="max-width: 300px">
-            {{ pageTitle }}
+            {{ txt.pageTitle }}
           </div>
           <div class="landing-page-subtitle pt-6" style="max-width: 370px">
-            {{ pageSubTitle }}
+            {{ txt.pageSubTitle }}
           </div>
           <div class="mt-24 sm:mt-8 lg:mt-24" style="width: 11rem">
             <CyButton :hasGlitch="true" class="glitch" @click="contactUs">{{
-              contactBtn
+              txt.contactBtn
             }}</CyButton>
           </div>
         </div>
@@ -42,77 +42,77 @@
       <div class="mx-0 sm:mx-10 mt-48 sm:mt-64">
         <!-- Section Title -->
         <div class="flex justify-start mb-6">
-          <div class="pl-4 sm:pl-0 text-h2">{{ projectsTitle }}</div>
+          <div class="pl-4 sm:pl-0 text-h2">{{ txt.projectsTitle }}</div>
         </div>
         <!-- Project Grid -->
         <div class="grid gap-10 md:gap-20 grid-cols-1">
           <Project
-            :title="pepiconsTitle"
+            :title="txt.pepiconsTitle"
             img="/pepicons.png"
             url="https://pepicons.com/"
             linkText="pepicons.com"
-            :description="pepIconsDescription"
+            :description="txt.pepIconsDescription"
           />
           <Project
-            :title="cinematchTitle"
+            :title="txt.cinematchTitle"
             img="/cinematch.png"
             url="https://pepicons.com/"
             linkText="cinematch.com"
-            :description="cinematchDescription"
+            :description="txt.cinematchDescription"
           />
           <Project
-            :title="UBITitle"
+            :title="txt.UBITitle"
             img="/ubi.png"
             url="https://pepicons.com/"
             linkText="ubi-calculator.com"
-            :description="UBICalculatorDescription"
+            :description="txt.UBICalculatorDescription"
           />
           <Project
-            :title="peerLearningTitle"
+            :title="txt.peerLearningTitle"
             img="/peer-learning.png"
             url="https://pepicons.com/"
             linkText="peer-learning.com"
-            :description="peerLearningDescription"
+            :description="txt.peerLearningDescription"
           />
         </div>
       </div>
       <FrameworksMobile
         class="sm:hidden mt-24"
         style="margin-bottom: 23rem"
-        :sectionTitle="frameworksSectionTitle"
-        :planetarDescription="frameworkMobilePlanetarDescription"
-        :magnetarDescription="frameworkMobileMagnetarDescription"
-        :blitzarDescription="frameworkMobileBlitzarDescription"
+        :sectionTitle="txt.frameworksSectionTitle"
+        :planetarDescription="txt.frameworkMobilePlanetarDescription"
+        :magnetarDescription="txt.frameworkMobileMagnetarDescription"
+        :blitzarDescription="txt.frameworkMobileBlitzarDescription"
       />
       <FrameworksDesktop
         class="hidden sm:block mt-72 mx-10"
         style="margin-bottom: 23rem"
-        :sectionTitle="frameworksSectionTitle"
-        :planetarDescription="frameworkDesktopPlanetarDescription"
-        :magnetarDescriptionTitle="frameworkDesktopMagnetarDescriptionTitle"
-        :magnetarDescription="frameworkDesktopMagnetarDescription"
-        :blitzarDescription="frameworkDesktopBlitzarDescription"
+        :sectionTitle="txt.frameworksSectionTitle"
+        :planetarDescription="txt.frameworkDesktopPlanetarDescription"
+        :magnetarDescriptionTitle="txt.frameworkDesktopMagnetarDescriptionTitle"
+        :magnetarDescription="txt.frameworkDesktopMagnetarDescription"
+        :blitzarDescription="txt.frameworkDesktopBlitzarDescription"
       />
       <!-- How we design and code -->
       <div class="mx-10">
         <div class="flex flex-col">
           <div class="" style="max-width: 403px">
             <div class="flex pb-4">
-              <div class="text-h2">{{ designTitle }}</div>
+              <div class="text-h2">{{ txt.designTitle }}</div>
               <img class="w-5 ml-2 sm:w-10 sm:ml-6" src="/cy-icon-white.svg" alt="" />
             </div>
             <div class="text-h4">
-              {{ designSubTitle }}
+              {{ txt.designSubTitle }}
             </div>
           </div>
           <div class="mt-16 sm:mt-24 flex justify-end">
             <div style="max-width: 403px">
               <div class="flex pb-4 justify-end sm:justify-start">
-                <div class="text-h2">{{ codeTitle }}</div>
+                <div class="text-h2">{{ txt.codeTitle }}</div>
                 <img class="w-5 ml-2 sm:w-10 sm:ml-6" src="/cy-icon-white.svg" alt="" />
               </div>
               <div class="text-h4 text-right sm:text-left">
-                {{ codeSubTitle }}
+                {{ txt.codeSubTitle }}
               </div>
             </div>
           </div>
@@ -120,68 +120,9 @@
       </div>
       <!-- About Us -->
       <div class="mx-10 mt-72">
-        <div class="text-h2">{{ aboutUs }}</div>
-        <!-- Luca -->
-        <div class="flex-col mt-8 pb-8">
-          <div class="w-full md:w-5/6 sm:mt-10">
-            <div class="flex items-center mb-4">
-              <span class="text-h3 whitespace-nowrap">{{ lucaName }}</span>
-              <span class="line ml-4 w-full"></span>
-            </div>
-            <div class="flex mt-2">
-              <img
-                class="w-10 h-10 sm:w-56 sm:h-56 rounded-full mr-4"
-                src="/martin.jpg"
-                alt="Avatar"
-              />
-              <div class="flex-col pl-0 sm:pl-4 pr-0 sm:pr-8 md:pr-12 lg:pr-24">
-                <p class="text-h4">
-                  {{ lucaBio }}
-                </p>
-                <div class="flex flex-wrap items-center mt-6">
-                  <a href="https://twitter.com/Mesqueeb" class="flex items-center lg:mr-5">
-                    <img class="h-6 sm:h-12" src="/Twitter_Logo.svg" alt="Twitter Logo" />
-                    <p class="text-h4 ml-1 mr-6">Twitter</p>
-                  </a>
-                  <a href="https://github.com/mesqueeb" class="flex items-center">
-                    <img class="h-4 sm:h-8" src="/Github_Mark.svg" />
-                    <p class="text-h4 ml-3">Github</p>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Tadaki -->
-        <div class="flex-col mt-8 pb-8">
-          <div class="flex justify-start sm:justify-end">
-            <div class="w-full md:w-5/6 sm:mt-10">
-              <div class="flex items-center mb-4">
-                <span class="line hidden sm:block mr-4 ml-4 w-full"></span>
-                <span class="text-h3 whitespace-nowrap">{{ tadakiName }}</span>
-                <span class="line block sm:hidden ml-4 w-full"></span>
-              </div>
-              <div class="flex mt-2 sm:flex-row-reverse">
-                <img
-                  class="w-10 h-10 sm:w-56 sm:h-56 rounded-full mr-4 sm:mr-0"
-                  src="/martin.jpg"
-                  alt="Avatar"
-                />
-                <div class="flex-col pl-0 pr-0 sm:pl-8 md:pl-12 lg:pl-24 sm:pr-4">
-                  <p class="text-h4">
-                    {{ tadakiBio }}
-                  </p>
-                  <div class="flex items-center mt-6">
-                    <a href="https://github.com/mesqueeb" class="flex items-center">
-                      <img class="h-4 sm:h-8" src="/Github_Mark.svg" />
-                      <p class="text-h4 ml-3">Github</p>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="text-h2">{{ txt.aboutUs }}</div>
+        <AboutUsSection imgPosition="left" :bio="txt.lucaBio" :name="txt.lucaName" />
+        <AboutUsSection imgPosition="right" :bio="txt.tadakiBio" :name="txt.tadakiName" />
       </div>
       <!-- Contact Us logo -->
       <div class="mx-10 mt-48 sm:mt-72 pb-8 flex flex-col items-center">
@@ -197,7 +138,7 @@
       <div class="mx-10 mt-4 sm:mt-24 md:mt-32 flex-col justify-end">
         <p class="text-h3 text-center">English? or Japanese?</p>
         <div class="flex justify-center mt-4">
-          <cy-toggle @input="toggled" />
+          <CyToggle @input="toggled" />
         </div>
       </div>
       <!-- Copyright and Terms -->
@@ -212,6 +153,7 @@
 import CyToggle from './CyToggle.vue'
 import Monster from './Monster.vue'
 import CyButton from './CyButton.vue'
+import AboutUsSection from './AboutUsSection.vue'
 import Project from './Project.vue'
 import FrameworksMobile from './FrameworksMobile.vue'
 import FrameworksDesktop from './FrameworksDesktop.vue'
@@ -222,6 +164,8 @@ import Vue from 'vue'
 import VueWaypoint from 'vue-waypoint'
 import smoothscroll from 'smoothscroll-polyfill'
 
+import { lang } from './lang.js'
+
 // Waypoint plugin
 Vue.use(VueWaypoint)
 
@@ -231,6 +175,7 @@ export default {
     CyToggle,
     Monster,
     CyButton,
+    AboutUsSection,
     Project,
     FrameworksMobile,
     FrameworksDesktop,
@@ -249,122 +194,21 @@ export default {
   }),
 
   computed: {
-    pageTitle() {
-      return this.japanese ? 'japanese' : 'We Craft without cruft.'
-    },
-    pageSubTitle() {
-      return this.japanese
-        ? '洗練されたアプリの創造で、より良いウェブの世界を目指す。'
-        : 'We craft beautiful apps and strive for a better web.'
-    },
-    contactBtn() {
-      return this.japanese ? 'japanese' : 'Contact Us'
-    },
-    projectsTitle() {
-      return this.japanese ? 'japanese' : 'Our Projects'
-    },
-    pepiconsTitle() {
-      return this.japanese ? 'japanese' : 'Pepicons'
-    },
-    cinematchTitle() {
-      return this.japanese ? 'japanese' : 'Cinematch'
-    },
-    UBITitle() {
-      return this.japanese ? 'japanese' : 'UBI Calculator'
-    },
-    peerLearningTitle() {
-      return this.japanese ? 'japanese' : 'Peer Learning'
-    },
-    pepIconsDescription() {
-      return this.japanese
-        ? 'Pepiconsは、総数118個の完全オリジナルアイコンパッケージです。 このアイコンセットには、POP!バージョン とPrintバージョンの2種類のバリエーションがあり、どちらもレトロな雰囲気を基調としたアイコンセットになっています。 ウェブサイトのライブプレビューでは、このパックが提供するすべてのアイコンを試用すことができます。'
-        : 'Pepicons is a grand total of 118 hand-crafted icons — and counting! This completely original icon set is made in two retro variants: Pop! and Print. A live preview on the website allows you to play around with all the variations the icon pack has to offer.'
-    },
-    cinematchDescription() {
-      return this.japanese
-        ? 'CineMatchでは、映画のウォッチリストを作成して友達と共有することができます。 このアプリのユーザーインターフェースは、美しく見やすさを追求したものになっています。'
-        : 'With the help of CineMatch a user can create film watchlists and share them with friends. This neat app has a clean user interface that organizes the user’s lists beautifully and with simplicity.'
-    },
-    UBICalculatorDescription() {
-      return this.japanese
-        ? 'ベーシックインカムでどれだけ利益を得ているのか疑問に思ったことはありませんか？ UBI Calculatorでは、さまざまなUBIプランで得た収益を正確に把握できるようにするオリジナルプラグインです。'
-        : 'Ever wonder how you might benefit through a Universal Basic Income? The UBI Calculator is an ingenius plugin that allows a user to calculate their exact earnings with different UBI plans.'
-    },
-    peerLearningDescription() {
-      return this.japanese
-        ? 'PeerLearningは、学生達が協力して互いに学び合うためのオンライン教育ソフトです。 教育分野の助成金によって資金提供を受けているこのソフトには、（ここから微妙→）現在のユーザーテストの利点があります。'
-        : 'PeerLearning is an online education software bringing students together to collaborate and learn from one another. Funded by education-focused grants, this software has the benefit of current user testing.'
-    },
-    designTitle() {
-      return this.japanese ? 'japanese' : 'How we design'
-    },
-    designSubTitle() {
-      return this.japanese
-        ? 'ユーザーの意図を明確にとらえたデザインで、ユーザーの理想を実現します。'
-        : 'With clarity and focus, we enable the user to engage with purpose.'
-    },
-    codeTitle() {
-      return this.japanese ? 'japanese' : 'How we code'
-    },
-    codeSubTitle() {
-      return this.japanese
-        ? 'シンプルでモダン、そして適応性の高いコードでデザインの美しさを表現します。'
-        : 'Matching the beauty of the design, our code is modern, concise, and adaptive.'
-    },
-    aboutUs() {
-      return this.japanese ? 'japanese' : 'About Us'
-    },
-    lucaName() {
-      return this.japanese ? 'japanese' : 'Luca Ban'
-    },
-    lucaBio() {
-      return this.japanese
-        ? 'japanese'
-        : 'Has been a technology enthusiast since birth. He thinks of writing code as nothing less than poetry. Believes everything is possible — talent is a skill you teach yourself.'
-    },
-    tadakiName() {
-      return this.japanese ? 'japanese' : 'Tadaki Matsushita'
-    },
-    tadakiBio() {
-      return this.japanese
-        ? 'japanese'
-        : 'Self taught coder. He has helped companies all over Japan turn their vision into code. Excels at web marketing; and currently loves automation.'
-    },
-    frameworksSectionTitle() {
-      return this.japanese ? 'japanese' : 'Frameworks'
-    },
-    frameworkDesktopPlanetarDescription() {
-      return this.japanese
-        ? 'この軽快なVueフレームワークは、リアルタイムに反映されるスタイルガイドを自動生成します。 開発者とデザイナーの相互の創造と開発をより強力にするコンポーネントエクスプローラーが利用できます。'
-        : 'This nimble Vue framework creates an auto-generated, living style guide. The styleguide comes complete with an interactive component explorer that both developers and designers will love.'
-    },
-    frameworkDesktopMagnetarDescriptionTitle() {
-      return this.japanese ? 'あなたが望むデータがここに。' : 'Your data, where you want.'
-    },
-    frameworkDesktopMagnetarDescription() {
-      return this.japanese
-        ? 'このフレームワークに依存しない同期ソリューションは、任意のDBまたはAPIに自動的に接続し、ローカルでデータを整理・保持しておくことができます。 さらに、直感的でシンプルなUIが組み込まれています。'
-        : 'This framework-agnostic syncing solution can automatically connect to any DB or API and keep your data organised for you in a local data store. Plus, it’s got optimistic-UI built right in.'
-    },
-    frameworkDesktopBlitzarDescription() {
-      return this.japanese
-        ? 'Blitzarは、VueJSで高速プロトタイピングを可能にする柔軟なコンポーネントコレクションです。'
-        : 'Blitzar is a flexible component collection allowing for blitzing fast prototyping with VueJS.'
-    },
-    frameworkMobilePlanetarDescription() {
-      return this.japanese
-        ? 'japanese'
-        : 'This nimble Vue framework creates an auto-generated, living style guide.'
-    },
-    frameworkMobileMagnetarDescription() {
-      return this.japanese
-        ? 'japanese'
-        : 'Magnetar is a framework-agnostic syncing solution that keeps your data where you need it.'
-    },
-    frameworkMobileBlitzarDescription() {
-      return this.japanese
-        ? 'japanese'
-        : 'A flexible component collection allowing for blitzing fast prototyping with VueJS.'
+    txt() {
+      const selectedLang = this.japanese ? 'ja' : 'en'
+
+      const formattedLang = Object.entries(lang).reduce((result, [key, value]) => {
+        // [key, value]
+        // key === 'frameworkMobileBlitzarDescription'
+        // value === {
+        //   ja: 'japanese',
+        //   en: 'A flexible component collection allowing for blitzing fast prototyping with VueJS',
+        // }
+        result[key] = value[selectedLang]
+        return result
+      }, {})
+
+      return formattedLang
     },
   },
   mounted() {

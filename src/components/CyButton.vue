@@ -1,7 +1,6 @@
 <template>
   <button
-    id="cy-button"
-    class="relative btn bg-white border-2 border-white focus:outline-none focus:bg-btn-light-green focus:border-btn-bright-green text-h5 text-black"
+    class="cy-button relative btn bg-white border-2 border-white focus:outline-none focus:bg-btn-light-green focus:border-btn-bright-green text-h5 text-black"
     v-bind="$attrs"
     v-on="$listeners"
     @mouseenter="setHoverOn"
@@ -15,7 +14,9 @@
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 13.9 17"
         >
-          <path d="M11.332,2.734V0h-8.5V2.734H0v8.2H2.832V13.9H5.9V10.937H8.5V13.9h3.07V10.937H17v-8.2Zm-2.595,5.7H5.9V5.7H8.737Zm5.43,0H11.332V5.7h2.835Z" />
+          <path
+            d="M11.332,2.734V0h-8.5V2.734H0v8.2H2.832V13.9H5.9V10.937H8.5V13.9h3.07V10.937H17v-8.2Zm-2.595,5.7H5.9V5.7H8.737Zm5.43,0H11.332V5.7h2.835Z"
+          />
         </svg>
         <span>
           <slot></slot>
@@ -27,10 +28,10 @@
       :id="id"
       class="absolute top-0"
       style="z-index: 1; margin-left: -7px; margin-top: -7px"
-    >
-    </canvas>
+    />
   </button>
 </template>
+
 <script>
 export default {
   name: 'CyButton',

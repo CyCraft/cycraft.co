@@ -1,55 +1,51 @@
 <template>
   <div class="h-full w-full">
     <transition name="fade">
-      <LoadingAnimation v-if="loading" />
+      <!-- <LoadingAnimation v-if="loading" /> -->
 
-      <div
-        v-else
-        id="app"
-        class="bg-black flex justify-center"
-      >
+      <div id="app" class="bg-black flex justify-center">
         <!-- Left glitches descending order -->
         <img
           src="/SideGlitchAlt3.png"
           class="side-glitch-1 blink-image-1"
           :class="{ showSideGlitch: !scrolling }"
-        >
+        />
         <img
           src="/SideGlitchAlt1.png"
           class="side-glitch-2 blink-image-3"
           :class="{ showSideGlitch: !scrolling }"
-        >
+        />
         <img
           src="/SideGlitchAlt2.png"
           class="side-glitch-3 blink-image-2"
           :class="{ showSideGlitch: !scrolling }"
-        >
+        />
         <img
           src="/SideGlitchAlt4.png"
           class="side-glitch-4 blink-image-3"
           :class="{ showSideGlitch: !scrolling }"
-        >
+        />
         <!-- Right glitches descending order -->
         <img
           src="/SideGlitchAlt5.png"
           class="side-glitch-5 blink-image-2"
           :class="{ showSideGlitch: !scrolling }"
-        >
+        />
         <img
           src="/SideGlitchAlt6.png"
           class="side-glitch-6 blink-image-1"
           :class="{ showSideGlitch: !scrolling }"
-        >
+        />
         <img
           src="/SideGlitchAlt7.png"
           class="side-glitch-7 blink-image 3"
           :class="{ showSideGlitch: !scrolling }"
-        >
+        />
         <img
           src="/SideGlitchAlt8.png"
           class="side-glitch-8 blink-image-1"
           :class="{ showSideGlitch: !scrolling }"
-        >
+        />
         <CyCraftHomePage />
       </div>
     </transition>

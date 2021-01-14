@@ -2,32 +2,26 @@
   <!-- Background overlay, show/hide based on modal state. -->
 
   <div class="fixed z-10 inset-0 overflow-y-auto">
-    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-
-      <div
-        class="fixed inset-0 transition-opacity"
-        aria-hidden="true"
-      >
-        <div
-          class="absolute inset-0 bg-gray-700 opacity-75"
-          @click="close"
-        ></div>
+    <div
+      class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
+    >
+      <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+        <div class="absolute inset-0 bg-gray-700 opacity-75" @click="close"></div>
       </div>
 
       <!-- This element is to trick the browser into centering the modal contents. -->
-      <span
-        class="hidden sm:inline-block align-middle sm:h-screen"
-        aria-hidden="true"
-      >&#8203;</span>
+      <span class="hidden sm:inline-block align-middle sm:h-screen" aria-hidden="true"
+        >&#8203;</span
+      >
 
       <!-- Modal panel, show/hide based on modal state. -->
       <transition
-        enter-active-class="ease-out duration-500"
-        enter-class="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-        enter-to-class="opacity-100 translate-y-0 sm:scale-100"
-        leave-active-class="ease-in duration-400"
-        leave-class="opacity-100 translate-y-0 sm:scale-100"
-        leave-to-class="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+        EnterActiveClass="ease-out duration-500"
+        EnterClass="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+        EnterToClass="opacity-100 translate-y-0 sm:scale-100"
+        LeaveActiveClass="ease-in duration-400"
+        LeaveClass="opacity-100 translate-y-0 sm:scale-100"
+        LeaveToClass="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
       >
         <div
           v-show="active"
@@ -38,7 +32,6 @@
         >
           <div>
             <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full">
-
               <svg
                 v-if="copied"
                 class="h-10 w-10 text-green-400"
@@ -54,12 +47,7 @@
                 />
               </svg>
 
-              <img
-                v-else
-                class="h-10 w-10"
-                src="/cy-icon-white.svg"
-                alt=""
-              />
+              <img v-else class="h-10 w-10" src="/cy-icon-white.svg" alt="" />
             </div>
             <div class="mt-3 text-center sm:mt-5">
               <div class="mt-6">
@@ -67,20 +55,16 @@
                   href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=luca@cycraft.co&su=&cc&bcc&body&tf=1"
                   target="_blank"
                 >
-                  <CyButtonSimple @click="close">Gmail (Browser)</CyButtonSimple>
+                  <CyButton @click="close">Gmail (Browser)</CyButton>
                 </a>
               </div>
               <div class="mt-2">
                 <a href="mailto:luca@cycraft.co">
-                  <CyButtonSimple @click="close">Email (Default)</CyButtonSimple>
+                  <CyButton @click="close">Email (Default)</CyButton>
                 </a>
               </div>
               <div class="mt-2 grid grid-cols-3 gap-2">
-
-                <CyButtonSimple
-                  class="mr-2 col-span-1"
-                  @click="copy"
-                >Copy</CyButtonSimple>
+                <CyButton class="mr-2 col-span-1" @click="copy">Copy</CyButton>
                 <span class="col-span-2 bg-gray-100 flex flex-row justify-center">
                   <input
                     id="copy-email"
@@ -88,9 +72,8 @@
                     type="text"
                     value="luca@cycraft.co"
                     readonly
-                  >
+                  />
                 </span>
-
               </div>
             </div>
           </div>
@@ -107,16 +90,16 @@
       </transition>
     </div>
   </div>
-
 </template>
 
 
 <script>
-import CyButtonSimple from './CyButtonSimple'
+import CyButton from './CyButton'
+
 export default {
   name: 'ContactDialog',
   components: {
-    CyButtonSimple,
+    CyButton,
   },
   props: {
     active: {

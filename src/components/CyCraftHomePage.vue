@@ -7,10 +7,7 @@
         @close="closeContact"
       />
     </transition>
-    <div
-      class="flex-col min-width-full justify-center"
-      style="max-width: 1100px"
-    >
+    <div class="flex-col min-width-full justify-center" style="max-width: 1100px">
       <!-- Mobile Header -->
       <div class="sm:hidden flex content-center justify-between p-3">
         <div class="flex items-center">
@@ -23,26 +20,18 @@
         <div class="hidden sm:flex sm:items-end pt-24 sm:pl-12 sm:pr-4 md:pr-10 lg:pr-20">
           <!-- CyCraft Logo -->
           <div class="object-contain sm:max-w-xs md:max-w-none">
-            <img
-              src="/cy-craft-logo.svg"
-              alt=""
-            />
+            <img src="/cy-craft-logo.svg" alt="" />
           </div>
         </div>
         <!-- Title Text & Button-->
         <div class="flex-col pt-10 px-10 mt-16 sm:mt-32 sm:mr-4">
-          <div
-            class="landing-page-title"
-            style="max-width: 300px"
-          >
-            {{pageTitle}}
+          <div class="landing-page-title" style="max-width: 300px">
+            {{ pageTitle }}
           </div>
-          <div
-            class="landing-page-subtitle pt-6"
-            style="max-width: 370px"
-          >
-            {{pageSubTitle}}
+          <div class="landing-page-subtitle pt-6" style="max-width: 370px">
+            {{ pageSubTitle }}
           </div>
+          <div class="mt-24 sm:mt-8 lg:mt-24" style="width: 11rem">
           <div
             class="mt-24 sm:mt-8 lg:mt-24"
             style="width: 11rem"
@@ -60,7 +49,7 @@
       <div class="mx-0 sm:mx-10 mt-48 sm:mt-64">
         <!-- Section Title -->
         <div class="flex justify-start mb-6">
-          <div class="pl-4 sm:pl-0 text-h2">{{projectsTitle}}</div>
+          <div class="pl-4 sm:pl-0 text-h2">{{ projectsTitle }}</div>
         </div>
         <!-- Project Grid -->
         <div class="grid gap-10 md:gap-20 grid-cols-1">
@@ -68,28 +57,28 @@
             :title="pepiconsTitle"
             img="/pepicons.png"
             url="https://pepicons.com/"
-            link-text="pepicons.com"
+            linkText="pepicons.com"
             :description="pepIconsDescription"
           />
           <Project
             :title="cinematchTitle"
             img="/cinematch.png"
             url="https://pepicons.com/"
-            link-text="cinematch.com"
+            linkText="cinematch.com"
             :description="cinematchDescription"
           />
           <Project
             :title="UBITitle"
             img="/ubi.png"
             url="https://pepicons.com/"
-            link-text="ubi-calculator.com"
+            linkText="ubi-calculator.com"
             :description="UBICalculatorDescription"
           />
           <Project
             :title="peerLearningTitle"
             img="/peer-learning.png"
             url="https://pepicons.com/"
-            link-text="peer-learning.com"
+            linkText="peer-learning.com"
             :description="peerLearningDescription"
           />
         </div>
@@ -97,52 +86,40 @@
       <FrameworksMobile
         class="sm:hidden mt-24"
         style="margin-bottom: 23rem"
-        :section-title="frameworksSectionTitle"
-        :planetar-description="frameworkMobilePlanetarDescription"
-        :magnetar-description="frameworkMobileMagnetarDescription"
-        :blitzar-description="frameworkMobileBlitzarDescription"
+        :sectionTitle="frameworksSectionTitle"
+        :planetarDescription="frameworkMobilePlanetarDescription"
+        :magnetarDescription="frameworkMobileMagnetarDescription"
+        :blitzarDescription="frameworkMobileBlitzarDescription"
       />
       <FrameworksDesktop
         class="hidden sm:block mt-72 mx-10"
         style="margin-bottom: 23rem"
-        :section-title="frameworksSectionTitle"
-        :planetar-description="frameworkDesktopPlanetarDescription"
-        :magnetar-description-title="frameworkDesktopMagnetarDescriptionTitle"
-        :magnetar-description="frameworkDesktopMagnetarDescription"
-        :blitzar-description="frameworkDesktopBlitzarDescription"
+        :sectionTitle="frameworksSectionTitle"
+        :planetarDescription="frameworkDesktopPlanetarDescription"
+        :magnetarDescriptionTitle="frameworkDesktopMagnetarDescriptionTitle"
+        :magnetarDescription="frameworkDesktopMagnetarDescription"
+        :blitzarDescription="frameworkDesktopBlitzarDescription"
       />
       <!-- How we design and code -->
       <div class="mx-10">
         <div class="flex flex-col">
-          <div
-            class=""
-            style="max-width: 403px"
-          >
+          <div class="" style="max-width: 403px">
             <div class="flex pb-4">
-              <div class="text-h2">{{designTitle}}</div>
-              <img
-                class="w-5 ml-2 sm:w-10 sm:ml-6"
-                src="/cy-icon-white.svg"
-                alt=""
-              />
+              <div class="text-h2">{{ designTitle }}</div>
+              <img class="w-5 ml-2 sm:w-10 sm:ml-6" src="/cy-icon-white.svg" alt="" />
             </div>
             <div class="text-h4">
-              {{designSubTitle}}
+              {{ designSubTitle }}
             </div>
           </div>
           <div class="mt-16 sm:mt-24 flex justify-end">
-
             <div style="max-width: 403px">
               <div class="flex pb-4 justify-end sm:justify-start">
-                <div class="text-h2">{{codeTitle}}</div>
-                <img
-                  class="w-5 ml-2 sm:w-10 sm:ml-6"
-                  src="/cy-icon-white.svg"
-                  alt=""
-                />
+                <div class="text-h2">{{ codeTitle }}</div>
+                <img class="w-5 ml-2 sm:w-10 sm:ml-6" src="/cy-icon-white.svg" alt="" />
               </div>
               <div class="text-h4 text-right sm:text-left">
-                {{codeSubTitle}}
+                {{ codeSubTitle }}
               </div>
             </div>
           </div>
@@ -150,12 +127,12 @@
       </div>
       <!-- About Us -->
       <div class="mx-10 mt-72">
-        <div class="text-h2">{{aboutUs}}</div>
+        <div class="text-h2">{{ aboutUs }}</div>
         <!-- Luca -->
         <div class="flex-col mt-8 pb-8">
           <div class="w-full md:w-5/6 sm:mt-10">
             <div class="flex items-center mb-4">
-              <span class="text-h3 whitespace-nowrap">{{lucaName}}</span>
+              <span class="text-h3 whitespace-nowrap">{{ lucaName }}</span>
               <span class="line ml-4 w-full"></span>
             </div>
             <div class="flex mt-2">
@@ -165,29 +142,16 @@
                 alt="Avatar"
               />
               <div class="flex-col pl-0 sm:pl-4 pr-0 sm:pr-8 md:pr-12 lg:pr-24">
-                <p class="text-h4 ">
-                  {{lucaBio}}
+                <p class="text-h4">
+                  {{ lucaBio }}
                 </p>
                 <div class="flex flex-wrap items-center mt-6">
-                  <a
-                    href="https://twitter.com/Mesqueeb"
-                    class="flex items-center lg:mr-5"
-                  >
-                    <img
-                      class="h-6 sm:h-12"
-                      src="/Twitter_Logo.svg"
-                      alt="Twitter Logo"
-                    />
+                  <a href="https://twitter.com/Mesqueeb" class="flex items-center lg:mr-5">
+                    <img class="h-6 sm:h-12" src="/Twitter_Logo.svg" alt="Twitter Logo" />
                     <p class="text-h4 ml-1 mr-6">Twitter</p>
                   </a>
-                  <a
-                    href="https://github.com/mesqueeb"
-                    class="flex items-center"
-                  >
-                    <img
-                      class="h-4 sm:h-8"
-                      src="/Github_Mark.svg"
-                    />
+                  <a href="https://github.com/mesqueeb" class="flex items-center">
+                    <img class="h-4 sm:h-8" src="/Github_Mark.svg" />
                     <p class="text-h4 ml-3">Github</p>
                   </a>
                 </div>
@@ -201,9 +165,8 @@
             <div class="w-full md:w-5/6 sm:mt-10">
               <div class="flex items-center mb-4">
                 <span class="line hidden sm:block mr-4 ml-4 w-full"></span>
-                <span class="text-h3 whitespace-nowrap">{{tadakiName}}</span>
+                <span class="text-h3 whitespace-nowrap">{{ tadakiName }}</span>
                 <span class="line block sm:hidden ml-4 w-full"></span>
-
               </div>
               <div class="flex mt-2 sm:flex-row-reverse">
                 <img
@@ -211,20 +174,13 @@
                   src="/martin.jpg"
                   alt="Avatar"
                 />
-                <div class="flex-col pl-0 pr-0  sm:pl-8 md:pl-12 lg:pl-24 sm:pr-4">
+                <div class="flex-col pl-0 pr-0 sm:pl-8 md:pl-12 lg:pl-24 sm:pr-4">
                   <p class="text-h4">
-                    {{tadakiBio}}
+                    {{ tadakiBio }}
                   </p>
                   <div class="flex items-center mt-6">
-
-                    <a
-                      href="https://github.com/mesqueeb"
-                      class="flex items-center"
-                    >
-                      <img
-                        class="h-4 sm:h-8"
-                        src="/Github_Mark.svg"
-                      />
+                    <a href="https://github.com/mesqueeb" class="flex items-center">
+                      <img class="h-4 sm:h-8" src="/Github_Mark.svg" />
                       <p class="text-h4 ml-3">Github</p>
                     </a>
                   </div>
@@ -236,14 +192,8 @@
       </div>
       <!-- Contact Us logo -->
       <div class="mx-10 mt-48 sm:mt-72 pb-8 flex flex-col items-center">
-        <a
-          style="cursor: pointer"
-          @click="contactUs"
-        >
-          <img
-            src="/contact-us@2x.png"
-            alt="Contact Us Button"
-          />
+        <a style="cursor: pointer" @click="contactUs">
+          <img src="/contact-us@2x.png" alt="Contact Us Button" />
         </a>
         <div
           v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"
@@ -252,18 +202,14 @@
       </div>
       <!-- English or Japanese -->
       <div class="mx-10 mt-4 sm:mt-24 md:mt-32 flex-col justify-end">
-        <p class="text-h3 text-center">
-          English? or Japanese?
-        </p>
+        <p class="text-h3 text-center">English? or Japanese?</p>
         <div class="flex justify-center mt-4">
           <cy-toggle @input="toggled" />
         </div>
       </div>
       <!-- Copyright and Terms -->
       <div class="mx-10 mt-16 sm:mt-32 md:mt-48 pb-16 flex-col justify-end">
-        <p class="text-h3 text-center">
-          &copy; 2020 CyCraft
-        </p>
+        <p class="text-h3 text-center">&copy; 2020 CyCraft</p>
       </div>
     </div>
   </div>
@@ -429,7 +375,7 @@ export default {
         : 'A flexible component collection allowing for blitzing fast prototyping with VueJS.'
     },
   },
-  mounted(){
+  mounted() {
     smoothscroll.polyfill()
   },
   methods: {

@@ -1,6 +1,7 @@
 <template>
   <button
     class="cy-button relative btn bg-white border-2 border-white focus:outline-none focus:bg-btn-light-green focus:border-btn-bright-green text-h5 text-black"
+    :class="hasGlitch ? '' : 'hover:bg-btn-light-green'"
     v-bind="$attrs"
     v-on="$listeners"
     @mouseenter="setHoverOn"
@@ -37,17 +38,17 @@ export default {
   name: 'CyButton',
   inheritAttrs: false,
   props: {
-    id: {
-      type: String,
-      default: '1',
-    },
+    hasGlitch: { type: Boolean, default: false },
   },
   data() {
     return {
+      id: `${Math.random()}`,
       hover: false,
     }
   },
   mounted() {
+    if (!this.hasGlitch) return
+
     let width = this.$el.offsetWidth
     let height = this.$el.offsetHeight
     var canvasHidden = document.getElementById(this.id)
@@ -97,9 +98,11 @@ export default {
   },
   methods: {
     setHoverOn() {
+      if (!this.hasGlitch) return
       this.hover = true
     },
     setHoverOff() {
+      if (!this.hasGlitch) return
       this.hover = false
     },
   },

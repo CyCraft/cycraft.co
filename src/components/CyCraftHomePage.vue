@@ -2,8 +2,8 @@
   <div class="bg-black flex justify-center h-auto">
     <transition name="fade">
       <ContactDialog
-        v-show="contact"
-        :active="contact"
+        v-if="showingContactDialog"
+        :active="showingContactDialog"
         @close="closeContact"
       />
     </transition>
@@ -32,16 +32,9 @@
             {{ pageSubTitle }}
           </div>
           <div class="mt-24 sm:mt-8 lg:mt-24" style="width: 11rem">
-          <div
-            class="mt-24 sm:mt-8 lg:mt-24"
-            style="width: 11rem"
-          >
-            <CyButton
-              id="1"
-              data-text="CONTACT US"
-              class="glitch"
-              @click="contactUs"
-            >{{contactBtn}}</CyButton>
+            <CyButton :hasGlitch="true" class="glitch" @click="contactUs">{{
+              contactBtn
+            }}</CyButton>
           </div>
         </div>
       </div>
@@ -219,7 +212,6 @@
 import CyToggle from './CyToggle.vue'
 import Monster from './Monster.vue'
 import CyButton from './CyButton.vue'
-import CyButtonSimple from './CyButtonSimple.vue'
 import Project from './Project.vue'
 import FrameworksMobile from './FrameworksMobile.vue'
 import FrameworksDesktop from './FrameworksDesktop.vue'
@@ -247,7 +239,7 @@ export default {
 
   data: () => ({
     show: false,
-    contact: false,
+    showingContactDialog: false,
     japanese: false,
     intersectionOptions: {
       root: null,
@@ -380,10 +372,10 @@ export default {
   },
   methods: {
     contactUs() {
-      this.contact = true
+      this.showingContactDialog = true
     },
     closeContact() {
-      this.contact = false
+      this.showingContactDialog = false
     },
     toggled(value) {
       this.japanese = value

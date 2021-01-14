@@ -1,9 +1,9 @@
 <template>
   <div class="h-full w-full">
     <transition name="fade">
-      <!-- <LoadingAnimation v-if="loading" /> -->
+      <LoadingAnimation v-if="loading" />
 
-      <div id="app" class="bg-black flex justify-center">
+      <div v-else id="app" class="bg-black flex justify-center">
         <!-- Left glitches descending order -->
         <img
           src="/SideGlitchAlt3.png"

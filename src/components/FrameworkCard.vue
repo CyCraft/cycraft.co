@@ -9,7 +9,7 @@
         style="position: absolute; left: 0; top: 50%; transform: translate(0,-50%);"
       >
         <div class="text-h3 pl-1">{{title}}</div>
-        <div class="texturl text-body3 pl-1 hover:underline">{{textUrl}}</div>
+        <div class="texturl text-body3 pl-1">{{textUrl}}</div>
       </div>
       <slot></slot>
     </div>
@@ -30,6 +30,8 @@ export default {
   position: relative
 .texturl
   text-decoration: none
+.texturl:hover
+  text-decoration: underline
 .framework-card-box:hover > .texturl
   text-decoration: underline
 </style>

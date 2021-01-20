@@ -1,67 +1,30 @@
 <template>
   <div>
-    <div class="text-h2 text-left">{{sectionTitle}}</div>
+    <div class="text-h2 text-left">{{ sectionTitle }}</div>
 
     <div class="grid grid-cols-3 mt-12">
       <!-- Planetar -->
-      <div
-        class="flex flex-col items-center cursor-pointer place-self-start"
-        @click="setPlanetar"
-      >
-        <img
-          src="/planetar-logo-white.svg"
-          alt=""
-        />
-        <img
-          class="mt-6"
-          src="/planetar-name.svg"
-          alt=""
-        />
+      <div class="flex flex-col items-center cursor-pointer place-self-start" @click="setPlanetar">
+        <img src="/planetar-logo-white.svg" alt="" />
+        <img class="mt-6" src="/planetar-name.svg" alt="" />
       </div>
 
       <!-- Magnetar -->
-      <div
-        class="flex flex-col items-center cursor-pointer place-self-center"
-        @click="setMagnetar"
-      >
-        <img
-          src="/magnetar-logo-white.svg"
-          alt=""
-        />
-        <img
-          class="mt-6"
-          src="/magnetar-name.svg"
-          alt=""
-        />
+      <div class="flex flex-col items-center cursor-pointer place-self-center" @click="setMagnetar">
+        <img src="/magnetar-logo-white.svg" alt="" />
+        <img class="mt-6" src="/magnetar-name.svg" alt="" />
       </div>
 
       <!-- Blitzar -->
-      <div
-        class="flex flex-col items-center cursor-pointer place-self-end"
-        @click="setBlitzar"
-      >
-        <img
-          src="/blitzar-logo-white.svg"
-          alt=""
-        />
-        <img
-          class="mt-6"
-          src="/blitzar-name.svg"
-          alt=""
-        />
+      <div class="flex flex-col items-center cursor-pointer place-self-end" @click="setBlitzar">
+        <img src="/blitzar-logo-white.svg" alt="" />
+        <img class="mt-6" src="/blitzar-name.svg" alt="" />
       </div>
     </div>
     <transition name="icon-fade">
-      <div
-        v-show="planetar"
-        id="planetar"
-        class="mt-6"
-      >
+      <div v-show="planetar" id="planetar" class="mt-6">
         <div class="flex flex-row">
-          <div
-            class="w-1/2 flex flex-row"
-            style="padding-left: 115px"
-          >
+          <div class="w-1/2 flex flex-row" style="padding-left: 115px">
             <svg
               style="flex: 1"
               width="432"
@@ -69,42 +32,23 @@
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                id="planetar-line"
-                d="M431 211V121.5H1V0.5"
-                stroke="white"
-              />
+              <path id="planetar-line" d="M431 211V121.5H1V0.5" stroke="white" />
             </svg>
           </div>
-          <div class="w-1/2">
-
-          </div>
+          <div class="w-1/2"></div>
         </div>
         <div class="flex flex-row justify-center">
           <div class="flex flex-col justify-center">
-            <FrameworkCard
-              title="planetar"
-              textUrl="planetar.cyraft.co"
-              url="https://google.com"
-            >
-              <PlanetarFrameworkCardSvg />
+            <FrameworkCard title="planetar" textUrl="planetar.cyraft.co" url="https://google.com">
+              <PlanetarFrameworkCardSvg style="bottom: -2px; right: -25px" />
             </FrameworkCard>
-            <div
-              class="text-body1 mt-4"
-              style="width: 210px"
-            >{{planetarDescription}}</div>
+            <div class="text-body1 mt-4" style="width: 210px">{{ planetarDescription }}</div>
           </div>
-
         </div>
       </div>
     </transition>
     <transition name="icon-fade">
-      <div
-        v-show="magnetar"
-        id="magnetar"
-        class="mt-6"
-      >
-
+      <div v-show="magnetar" id="magnetar" class="mt-6">
         <div class="flex flex-row justify-center">
           <svg
             width="2"
@@ -113,49 +57,26 @@
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              id="magnetar-line"
-              d="M1 208V0"
-              stroke="white"
-            />
+            <path id="magnetar-line" d="M1 208V0" stroke="white" />
           </svg>
         </div>
 
         <div class="flex flex-row justify-center">
           <div class="flex flex-col justify-center">
-            <FrameworkCard
-              title="Magnetar"
-              textUrl="magnetar.cycraft.co"
-              url="https://google.com"
-            >
-              <MagnetarFrameworkCardSvg />
+            <FrameworkCard title="Magnetar" textUrl="magnetar.cycraft.co" url="https://google.com">
+              <MagnetarFrameworkCardSvg style="bottom: -2px; right: -55px" />
             </FrameworkCard>
-            <div
-              class="text-body1 mt-4"
-              style="width: 210px"
-            >{{magnetarDescriptionTitle}}
-            </div>
-            <div
-              class="text-body1 mt-4"
-              style="width: 210px"
-            >{{magnetarDescription}}</div>
+            <div class="text-body1 mt-4" style="width: 210px">{{ magnetarDescriptionTitle }}</div>
+            <div class="text-body1 mt-4" style="width: 210px">{{ magnetarDescription }}</div>
           </div>
-
         </div>
       </div>
     </transition>
     <transition name="icon-fade">
-      <div
-        v-show="blitzar"
-        class="mt-6"
-      >
+      <div v-show="blitzar" class="mt-6">
         <div class="flex flex-row">
-          <div class="w-1/2">
-          </div>
-          <div
-            class="w-1/2 flex flex-row"
-            style="padding-right: 90px"
-          >
+          <div class="w-1/2"></div>
+          <div class="w-1/2 flex flex-row" style="padding-right: 90px">
             <svg
               style="flex: 1"
               width="449"
@@ -163,27 +84,16 @@
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                id="blitzar-line"
-                d="M1 211V121.5H448.5V0.5"
-                stroke="white"
-              />
+              <path id="blitzar-line" d="M1 211V121.5H448.5V0.5" stroke="white" />
             </svg>
           </div>
         </div>
         <div class="flex flex-row justify-center">
           <div class="flex flex-col justify-center">
-            <FrameworkCard
-              title="Blitzar"
-              textUrl="blitzar.cycraft.co"
-              url="https://google.com"
-            >
-              <BlitzarFrameworkCardSvg />
+            <FrameworkCard title="Blitzar" textUrl="blitzar.cycraft.co" url="https://google.com">
+              <BlitzarFrameworkCardSvg style="bottom: -2px; right: -5px" />
             </FrameworkCard>
-            <div
-              class="text-body1 mt-4"
-              style="width: 210px"
-            >{{blitzarDescription}}</div>
+            <div class="text-body1 mt-4" style="width: 210px">{{ blitzarDescription }}</div>
           </div>
         </div>
       </div>

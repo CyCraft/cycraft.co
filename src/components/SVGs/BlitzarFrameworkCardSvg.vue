@@ -1,7 +1,7 @@
 <template>
   <svg
     class="absolute"
-    style="height: 95px; bottom: -2; right: 0; margin-right: -8px;"
+    style="height: 93px"
     viewBox="0 0 94 96"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

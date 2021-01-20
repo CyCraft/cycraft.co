@@ -3,7 +3,11 @@
     <transition name="fade">
       <LoadingAnimation v-if="loading" />
 
-      <div v-else id="app" class="bg-black flex justify-center">
+      <div
+        v-else
+        id="app"
+        class="bg-black flex justify-center"
+      >
         <!-- Left glitches descending order -->
         <img
           src="/SideGlitchAlt3.png"
@@ -93,7 +97,7 @@ export default {
   data() {
     return {
       scrolling: false,
-      loading: true,
+      loading: false,
     }
   },
   computed: {},

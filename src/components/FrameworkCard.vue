@@ -2,7 +2,7 @@
   <a :href="url">
     <div
       class="border border-white border-solid relative overflow-hidden framework-card-box"
-      style="height: 88px"
+      style="height: 88px; min-width: 250px"
     >
       <div
         class="px-2"

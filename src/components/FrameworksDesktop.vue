@@ -82,16 +82,21 @@
         </div>
         <div class="flex flex-row justify-center">
           <div class="flex flex-col justify-center">
+            <!-- cut -->
             <div
-              class="border border-white border-solid flex flex-row overflow-hidden"
-              style="width: 213px; height: 88px"
+              class="border border-white border-solid relative overflow-hidden"
+              style="height: 88px"
             >
-              <div class="flex flex-col justify-center">
+              <div
+                class="px-2"
+                style="position: absolute; left: 0; top: 50%; transform: translate(0,-50%);"
+              >
                 <div class="text-h3 pl-1">Planetar</div>
                 <div class="text-body3 pl-1">planetar.cycraft.co</div>
               </div>
               <svg
-                style="width: 200%; height: 200%; margin-left: -20px; margin-right: -40px; margin-top: -50px"
+                class="absolute"
+                style="height: 125px; bottom: 0; right: 0; margin-right: -40px;"
                 viewBox="0 0 140 111"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -101,8 +106,8 @@
                   stroke="white"
                 />
               </svg>
-
             </div>
+            <!-- end cut -->
 
             <div
               class="text-body1 mt-4"

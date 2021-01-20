@@ -21,99 +21,107 @@
         <img class="mt-6" src="/blitzar-name.svg" alt="blitzar" :draggable="false" />
       </div>
     </div>
-    <transition name="icon-fade">
-      <div v-show="planetar" id="planetar" class="mt-6">
-        <div class="flex flex-row">
-          <div class="w-1/2 flex flex-row" style="padding-left: 115px">
-            <svg
-              style="flex: 1"
-              width="432"
-              viewBox="0 0 432 211"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path id="planetar-line" d="M431 211V121.5H1V0.5" stroke="white" />
-            </svg>
-          </div>
-          <div class="w-1/2"></div>
-        </div>
-        <div class="flex flex-row justify-center">
-          <div class="flex flex-col justify-center">
-            <FrameworkCard title="planetar" textUrl="planetar.cyraft.co" url="https://google.com">
-              <PlanetarFrameworkCardSvg style="bottom: -2px; right: -25px" />
-            </FrameworkCard>
-            <div class="text-body1 mt-4" style="width: 210px">{{ planetarDescription }}</div>
-          </div>
-        </div>
-      </div>
-    </transition>
-    <transition name="icon-fade">
-      <div v-show="magnetar" id="magnetar" class="mt-6">
-        <div class="flex flex-row justify-center">
-          <svg
-            width="2"
-            height="208"
-            viewBox="0 0 2 208"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path id="magnetar-line" d="M1 208V0" stroke="white" />
-          </svg>
-        </div>
 
-        <div class="flex flex-row justify-center">
-          <div class="flex flex-col justify-center">
-            <FrameworkCard title="Magnetar" textUrl="magnetar.cycraft.co" url="https://google.com">
-              <MagnetarFrameworkCardSvg style="bottom: -2px; right: -55px" />
-            </FrameworkCard>
-            <div class="text-body1 mt-4" style="width: 210px">{{ magnetarDescriptionTitle }}</div>
-            <div class="text-body1 mt-4" style="width: 210px">{{ magnetarDescription }}</div>
+    <div style="min-height: 480px" class="mt-6">
+      <transition name="icon-fade">
+        <div v-show="planetar" id="planetar">
+          <div class="flex flex-row">
+            <div class="w-1/2 flex flex-row" style="padding-left: 115px">
+              <svg
+                style="flex: 1"
+                width="432"
+                viewBox="0 0 432 211"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path id="planetar-line" d="M431 211V121.5H1V0.5" stroke="white" />
+              </svg>
+            </div>
+            <div class="w-1/2"></div>
+          </div>
+          <div class="flex flex-row justify-center">
+            <div class="flex flex-col justify-center" style="width: 250px">
+              <FrameworkCard
+                title="planetar"
+                textUrl="planetar.cyraft.co"
+                url="https://google.com"
+              />
+              <div class="text-body1 mt-4">{{ planetarDescription }}</div>
+            </div>
           </div>
         </div>
-      </div>
-    </transition>
-    <transition name="icon-fade">
-      <div v-show="blitzar" class="mt-6">
-        <div class="flex flex-row">
-          <div class="w-1/2"></div>
-          <div class="w-1/2 flex flex-row" style="padding-right: 90px">
+      </transition>
+
+      <transition name="icon-fade">
+        <div v-show="magnetar" id="magnetar">
+          <div class="flex flex-row justify-center">
             <svg
-              style="flex: 1"
-              width="449"
-              viewBox="0 0 449 211"
+              width="2"
+              height="208"
+              viewBox="0 0 2 208"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path id="blitzar-line" d="M1 211V121.5H448.5V0.5" stroke="white" />
+              <path id="magnetar-line" d="M1 208V0" stroke="white" />
             </svg>
           </div>
-        </div>
-        <div class="flex flex-row justify-center">
-          <div class="flex flex-col justify-center">
-            <FrameworkCard title="Blitzar" textUrl="blitzar.cycraft.co" url="https://google.com">
-              <BlitzarFrameworkCardSvg style="bottom: -2px; right: -5px" />
-            </FrameworkCard>
-            <div class="text-body1 mt-4" style="width: 210px">{{ blitzarDescription }}</div>
+
+          <div class="flex flex-row justify-center">
+            <div class="flex flex-col justify-center" style="width: 250px">
+              <FrameworkCard
+                title="magnetar"
+                textUrl="magnetar.cycraft.co"
+                url="https://google.com"
+              />
+              <div class="text-body1 mt-4">{{ magnetarDescriptionTitle }}</div>
+              <div class="text-body1 mt-4">{{ magnetarDescription }}</div>
+            </div>
           </div>
         </div>
-      </div>
-    </transition>
+      </transition>
+
+      <transition name="icon-fade">
+        <div v-show="blitzar">
+          <div class="flex flex-row">
+            <div class="w-1/2"></div>
+            <div class="w-1/2 flex flex-row" style="padding-right: 90px">
+              <svg
+                style="flex: 1"
+                width="449"
+                viewBox="0 0 449 211"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path id="blitzar-line" d="M1 211V121.5H448.5V0.5" stroke="white" />
+              </svg>
+            </div>
+          </div>
+          <div class="flex flex-row justify-center">
+            <div class="flex flex-col justify-center" style="width: 250px">
+              <FrameworkCard
+                title="blitzar"
+                textUrl="blitzar.cycraft.co"
+                url="https://google.com"
+              />
+              <div class="text-body1 mt-4">{{ blitzarDescription }}</div>
+            </div>
+          </div>
+        </div>
+      </transition>
+    </div>
   </div>
 </template>
 
 <script>
 import anime from 'animejs/lib/anime.es.js'
 import FrameworkCard from './FrameworkCard'
-import PlanetarFrameworkCardSvg from './SVGs/PlanetarFrameworkCardSvg'
-import MagnetarFrameworkCardSvg from './SVGs/MagnetarFrameworkCardSvg'
-import BlitzarFrameworkCardSvg from './SVGs/BlitzarFrameworkCardSvg'
+
+const FADE_OUT_MS = 300
+
 export default {
   name: 'FrameworksDesktop',
   components: {
     FrameworkCard,
-    PlanetarFrameworkCardSvg,
-    MagnetarFrameworkCardSvg,
-    BlitzarFrameworkCardSvg,
   },
   props: {
     sectionTitle: {
@@ -143,35 +151,41 @@ export default {
       magnetar: false,
       blitzar: false,
       animateLineId: 'planetar-line',
+      animationTimeout: null,
     }
   },
   methods: {
-    setPlanetar() {
-      this.animateLineId = 'planetar-line'
+    resetAnimation() {
       this.magnetar = false
       this.blitzar = false
-      this.$nextTick(() => {
+      this.planetar = false
+      if (this.animationTimeout) {
+        clearTimeout(this.animationTimeout)
+      }
+    },
+    setPlanetar() {
+      this.resetAnimation()
+      this.animateLineId = 'planetar-line'
+      this.animationTimeout = setTimeout(() => {
         this.planetar = true
         this.animateLine()
-      })
+      }, FADE_OUT_MS)
     },
     setMagnetar() {
+      this.resetAnimation()
       this.animateLineId = 'magnetar-line'
-      this.planetar = false
-      this.blitzar = false
-      this.$nextTick(() => {
+      this.animationTimeout = setTimeout(() => {
         this.magnetar = true
         this.animateLine()
-      })
+      }, FADE_OUT_MS)
     },
     setBlitzar() {
+      this.resetAnimation()
       this.animateLineId = 'blitzar-line'
-      this.planetar = false
-      this.magnetar = false
-      this.$nextTick(() => {
+      this.animationTimeout = setTimeout(() => {
         this.blitzar = true
         this.animateLine()
-      })
+      }, FADE_OUT_MS)
     },
     animateLine() {
       const svgPath = document.getElementById(this.animateLineId)
@@ -187,15 +201,15 @@ export default {
   },
 }
 </script>
-<style scoped>
-.icon-fade-enter-active {
-  transition: all 1.5s ease;
-}
-.icon-fade-leave-active {
-  transition: all 0.3s ease;
-}
+
+<style lang="sass" scoped>
+.icon-fade-enter-active
+  transition: all 1.5s ease
+
+.icon-fade-leave-active
+  transition: all 0.3s ease // also update FADE_OUT_MS
+
 .icon-fade-enter,
-.icon-fade-leave-to {
-  opacity: 0;
-}
+.icon-fade-leave-to
+  opacity: 0
 </style>

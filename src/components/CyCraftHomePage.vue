@@ -1,18 +1,11 @@
 <template>
   <div class="bg-black flex justify-center h-auto">
     <transition name="fade">
-      <CyModal
-        v-if="showingContactDialog"
-        :active="showingContactDialog"
-        @close="closeContact"
-      >
+      <CyModal v-if="showingContactDialog" :active="showingContactDialog" @close="closeContact">
         <ContactDialog />
       </CyModal>
     </transition>
-    <div
-      class="flex-col min-width-full justify-center"
-      style="max-width: 1100px"
-    >
+    <div class="flex-col min-width-full justify-center" style="max-width: 1100px">
       <!-- Mobile Header -->
       <div class="sm:hidden flex content-center justify-between p-3">
         <div class="flex items-center">
@@ -25,35 +18,19 @@
         <div class="hidden sm:flex sm:items-end pt-24 sm:pl-12 sm:pr-4 md:pr-10 lg:pr-20">
           <!-- CyCraft Logo -->
           <div class="object-contain sm:max-w-xs md:max-w-none">
-            <img
-              src="/cy-craft-logo.svg"
-              alt=""
-            />
+            <img src="/cy-craft-logo.svg" alt="" />
           </div>
         </div>
         <!-- Title Text & Button-->
         <div class="flex-col pt-10 px-10 mt-16 sm:mt-32 sm:mr-4">
-          <div
-            class="landing-page-title"
-            style="max-width: 300px"
-          >
+          <div class="landing-page-title" style="max-width: 300px">
             {{ txt.pageTitle }}
           </div>
-          <div
-            class="landing-page-subtitle pt-6"
-            style="max-width: 370px"
-          >
+          <div class="landing-page-subtitle pt-6" style="max-width: 370px">
             {{ txt.pageSubTitle }}
           </div>
-          <div
-            class="mt-24 sm:mt-8 lg:mt-24"
-            style="width: 11rem"
-          >
-            <CyButton
-              :hasGlitch="true"
-              class="glitch"
-              @click="contactUs"
-            >{{
+          <div class="mt-24 sm:mt-8 lg:mt-24" style="width: 11rem">
+            <CyButton :hasGlitch="true" class="glitch" @click="contactUs">{{
               txt.contactBtn
             }}</CyButton>
           </div>
@@ -99,7 +76,6 @@
       </div>
       <FrameworksMobile
         class="sm:hidden mt-24"
-        style="margin-bottom: 23rem"
         :sectionTitle="txt.frameworksSectionTitle"
         :planetarDescription="txt.frameworkMobilePlanetarDescription"
         :magnetarDescription="txt.frameworkMobileMagnetarDescription"
@@ -107,7 +83,6 @@
       />
       <FrameworksDesktop
         class="hidden sm:block mt-72 mx-10"
-        style="margin-bottom: 23rem"
         :sectionTitle="txt.frameworksSectionTitle"
         :planetarDescription="txt.frameworkDesktopPlanetarDescription"
         :magnetarDescriptionTitle="txt.frameworkDesktopMagnetarDescriptionTitle"
@@ -115,19 +90,12 @@
         :blitzarDescription="txt.frameworkDesktopBlitzarDescription"
       />
       <!-- How we design and code -->
-      <div class="mx-10">
+      <div class="mx-10" style="margin-top: 23rem">
         <div class="flex flex-col">
-          <div
-            class=""
-            style="max-width: 403px"
-          >
+          <div class="" style="max-width: 403px">
             <div class="flex pb-4">
               <div class="text-h2">{{ txt.designTitle }}</div>
-              <img
-                class="w-5 ml-2 sm:w-10 sm:ml-6"
-                src="/cy-icon-white.svg"
-                alt=""
-              />
+              <img class="w-5 ml-2 sm:w-10 sm:ml-6" src="/cy-icon-white.svg" alt="" />
             </div>
             <div class="text-h4">
               {{ txt.designSubTitle }}
@@ -137,11 +105,7 @@
             <div style="max-width: 403px">
               <div class="flex pb-4 justify-end sm:justify-start">
                 <div class="text-h2">{{ txt.codeTitle }}</div>
-                <img
-                  class="w-5 ml-2 sm:w-10 sm:ml-6"
-                  src="/cy-icon-white.svg"
-                  alt=""
-                />
+                <img class="w-5 ml-2 sm:w-10 sm:ml-6" src="/cy-icon-white.svg" alt="" />
               </div>
               <div class="text-h4 text-right sm:text-left">
                 {{ txt.codeSubTitle }}
@@ -153,27 +117,13 @@
       <!-- About Us -->
       <div class="mx-10 mt-72">
         <div class="text-h2">{{ txt.aboutUs }}</div>
-        <AboutUsSection
-          imgPosition="left"
-          :bio="txt.lucaBio"
-          :name="txt.lucaName"
-        />
-        <AboutUsSection
-          imgPosition="right"
-          :bio="txt.tadakiBio"
-          :name="txt.tadakiName"
-        />
+        <AboutUsSection imgPosition="left" :bio="txt.lucaBio" :name="txt.lucaName" />
+        <AboutUsSection imgPosition="right" :bio="txt.tadakiBio" :name="txt.tadakiName" />
       </div>
       <!-- Contact Us logo -->
       <div class="mx-10 mt-48 sm:mt-72 pb-8 flex flex-col items-center">
-        <a
-          style="cursor: pointer"
-          @click="contactUs"
-        >
-          <img
-            src="/contact-us@2x.png"
-            alt="Contact Us Button"
-          />
+        <a style="cursor: pointer" @click="contactUs">
+          <img src="/contact-us@2x.png" alt="Contact Us Button" />
         </a>
         <div
           v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"

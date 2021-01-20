@@ -82,21 +82,14 @@
         </div>
         <div class="flex flex-row justify-center">
           <div class="flex flex-col justify-center">
-            <!-- cut -->
-            <div
-              class="border border-white border-solid relative overflow-hidden"
-              style="height: 88px"
+            <FrameworkCard
+              title="planetar"
+              textUrl="planetar.cyraft.co"
+              url="https://google.com"
             >
-              <div
-                class="px-2"
-                style="position: absolute; left: 0; top: 50%; transform: translate(0,-50%);"
-              >
-                <div class="text-h3 pl-1">Planetar</div>
-                <div class="text-body3 pl-1">planetar.cycraft.co</div>
-              </div>
               <svg
                 class="absolute"
-                style="height: 125px; bottom: 0; right: 0; margin-right: -40px;"
+                style="height: 125px; bottom: -2; right: 0; margin-right: -40px;"
                 viewBox="0 0 140 111"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -106,9 +99,7 @@
                   stroke="white"
                 />
               </svg>
-            </div>
-            <!-- end cut -->
-
+            </FrameworkCard>
             <div
               class="text-body1 mt-4"
               style="width: 210px"
@@ -143,16 +134,14 @@
 
         <div class="flex flex-row justify-center">
           <div class="flex flex-col justify-center">
-            <div
-              class="border border-white border-solid flex flex-row overflow-hidden"
-              style="width: 213px; height: 88px"
+            <FrameworkCard
+              title="Magnetar"
+              textUrl="magnetar.cycraft.co"
+              url="https://google.com"
             >
-              <div class="flex flex-col justify-center">
-                <div class="text-h3 pl-1">Magnetar</div>
-                <div class="text-body3 pl-1">magnetar.cycraft.co</div>
-              </div>
               <svg
-                style="width: 110%; height: 110%; margin-right: -70px; margin-top: -5px"
+                class="absolute"
+                style="height: 88px; bottom: -2; right: 0; margin-right: -53px;"
                 viewBox="0 0 113 94"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -273,8 +262,7 @@
                   mask="url(#path-1-outside-1)"
                 />
               </svg>
-            </div>
-
+            </FrameworkCard>
             <div
               class="text-body1 mt-4"
               style="width: 210px"
@@ -318,16 +306,14 @@
         </div>
         <div class="flex flex-row justify-center">
           <div class="flex flex-col justify-center">
-            <div
-              class="border border-white border-solid flex flex-row overflow-hidden"
-              style="width: 213px; height: 88px"
+            <FrameworkCard
+              title="Blitzar"
+              textUrl="blitzar.cycraft.co"
+              url="https://google.com"
             >
-              <div class="flex flex-col justify-center">
-                <div class="text-h3 pl-1">Blitzar</div>
-                <div class="text-body3 pl-1">blitzar.cycraft.co</div>
-              </div>
               <svg
-                style="width: 110%; height: 110%; margin-right: -30px; margin-top: -5px"
+                class="absolute"
+                style="height: 95px; bottom: -2; right: 0; margin-right: -8px;"
                 viewBox="0 0 94 96"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -337,9 +323,7 @@
                   stroke="white"
                 />
               </svg>
-
-            </div>
-
+            </FrameworkCard>
             <div
               class="text-body1 mt-4"
               style="width: 210px"
@@ -353,8 +337,12 @@
 
 <script>
 import anime from 'animejs/lib/anime.es.js'
+import FrameworkCard from './FrameworkCard'
 export default {
   name: 'FrameworksDesktop',
+  components: {
+    FrameworkCard,
+  },
   props: {
     sectionTitle: {
       type: String,

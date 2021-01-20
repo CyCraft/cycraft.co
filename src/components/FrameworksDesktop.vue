@@ -5,20 +5,20 @@
     <div class="grid grid-cols-3 mt-12">
       <!-- Planetar -->
       <div class="flex flex-col items-center cursor-pointer place-self-start" @click="setPlanetar">
-        <img src="/planetar-logo-white.svg" alt="" />
-        <img class="mt-6" src="/planetar-name.svg" alt="" />
+        <img src="/planetar-logo-white.svg" alt="planetar-logo" :draggable="false" />
+        <img class="mt-6" src="/planetar-name.svg" alt="planetar" :draggable="false" />
       </div>
 
       <!-- Magnetar -->
       <div class="flex flex-col items-center cursor-pointer place-self-center" @click="setMagnetar">
-        <img src="/magnetar-logo-white.svg" alt="" />
-        <img class="mt-6" src="/magnetar-name.svg" alt="" />
+        <img src="/magnetar-logo-white.svg" alt="magnetar-logo" :draggable="false" />
+        <img class="mt-6" src="/magnetar-name.svg" alt="magnetar" :draggable="false" />
       </div>
 
       <!-- Blitzar -->
       <div class="flex flex-col items-center cursor-pointer place-self-end" @click="setBlitzar">
-        <img src="/blitzar-logo-white.svg" alt="" />
-        <img class="mt-6" src="/blitzar-name.svg" alt="" />
+        <img src="/blitzar-logo-white.svg" alt="blitzar-logo" :draggable="false" />
+        <img class="mt-6" src="/blitzar-name.svg" alt="blitzar" :draggable="false" />
       </div>
     </div>
     <transition name="icon-fade">
@@ -148,24 +148,30 @@ export default {
   methods: {
     setPlanetar() {
       this.animateLineId = 'planetar-line'
-      this.planetar = true
       this.magnetar = false
       this.blitzar = false
-      this.animateLine()
+      this.$nextTick(() => {
+        this.planetar = true
+        this.animateLine()
+      })
     },
     setMagnetar() {
       this.animateLineId = 'magnetar-line'
       this.planetar = false
-      this.magnetar = true
       this.blitzar = false
-      this.animateLine()
+      this.$nextTick(() => {
+        this.magnetar = true
+        this.animateLine()
+      })
     },
     setBlitzar() {
       this.animateLineId = 'blitzar-line'
       this.planetar = false
       this.magnetar = false
-      this.blitzar = true
-      this.animateLine()
+      this.$nextTick(() => {
+        this.blitzar = true
+        this.animateLine()
+      })
     },
     animateLine() {
       const svgPath = document.getElementById(this.animateLineId)

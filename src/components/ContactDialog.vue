@@ -40,7 +40,7 @@
       </div>
       <div class="mt-2 grid grid-cols-3 gap-2">
         <CyButton
-          class="mr-2 col-span-1"
+          class="col-span-1"
           @click="copy"
         >Copy</CyButton>
         <span class="col-span-2 bg-gray-100 flex flex-row justify-center">

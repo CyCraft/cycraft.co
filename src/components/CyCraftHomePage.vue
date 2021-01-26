@@ -39,9 +39,7 @@
       <!-- Projects Section -->
       <div class="mx-0 sm:mx-10 mt-48 sm:mt-64">
         <!-- Section Title -->
-        <div class="flex justify-start mb-6">
-          <div class="pl-4 sm:pl-0 text-h2">{{ txt.projectsTitle }}</div>
-        </div>
+        <div class="pl-6 sm:pl-0 text-h2 mb-6">{{ txt.projectsTitle }}</div>
         <!-- Project Grid -->
         <div class="grid gap-10 md:gap-20 grid-cols-1">
           <CyProject
@@ -74,16 +72,17 @@
           />
         </div>
       </div>
+      <div class="mx-0 sm:mx-10 mt-48 sm:mt-64">
+        <div class="text-h2 pl-6 sm:pl-0 text-left">{{ txt.frameworksSectionTitle }}</div>
+      </div>
       <FrameworksMobile
-        class="sm:hidden mt-24"
-        :sectionTitle="txt.frameworksSectionTitle"
+        class="sm:hidden mt-20"
         :planetarDescription="txt.frameworkMobilePlanetarDescription"
         :magnetarDescription="txt.frameworkMobileMagnetarDescription"
         :blitzarDescription="txt.frameworkMobileBlitzarDescription"
       />
       <FrameworksDesktop
-        class="hidden sm:block mt-72 mx-10"
-        :sectionTitle="txt.frameworksSectionTitle"
+        class="hidden sm:block mt-10 mx-10"
         :planetarDescription="txt.frameworkDesktopPlanetarDescription"
         :magnetarDescriptionTitle="txt.frameworkDesktopMagnetarDescriptionTitle"
         :magnetarDescription="txt.frameworkDesktopMagnetarDescription"
@@ -115,7 +114,7 @@
         </div>
       </div>
       <!-- About Us -->
-      <div class="mx-10 mt-72">
+      <div class="mx-6 mt-72">
         <div class="text-h2">{{ txt.aboutUs }}</div>
         <AboutUsSection imgPosition="left" :bio="txt.lucaBio" :name="txt.lucaName" />
         <AboutUsSection imgPosition="right" :bio="txt.tadakiBio" :name="txt.tadakiName" />

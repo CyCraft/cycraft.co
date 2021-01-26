@@ -1,8 +1,8 @@
 <template>
   <div class="flex-col mb-8 cy-project">
-    <div class="pl-4 sm:pl-0 flex items-center mb-3">
+    <div class="pl-6 sm:pl-0 flex items-center mb-3">
       <span class="text-h3 pr-4 whitespace-nowrap">{{ title }}</span>
-      <span class="line mr-4 sm:mr-0 w-full"></span>
+      <span class="line mr-6 sm:mr-0 w-full"></span>
     </div>
 
     <!-- desktop overlay -->
@@ -42,7 +42,7 @@
         </a>
       </div>
     </div>
-    <div class="relative mx-auto block sm:hidden text-h4 pt-4 px-4 sm:pt-8 sm:px-0">
+    <div class="relative mx-auto block sm:hidden text-h4 pt-4 px-6 sm:pt-8 sm:px-0">
       {{ description }}
     </div>
   </div>

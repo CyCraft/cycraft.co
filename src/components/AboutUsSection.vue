@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="about-us-section">
     <div v-if="imgPosition === 'left'" class="flex-col mt-8 pb-8">
       <div class="w-full md:w-5/6 sm:mt-10">
         <div class="flex items-center mb-4">
@@ -7,7 +7,11 @@
           <span class="line ml-4 w-full"></span>
         </div>
         <div class="flex mt-2">
-          <img class="w-10 h-10 sm:w-56 sm:h-56 rounded-full mr-4" src="/martin.jpg" alt="Avatar" />
+          <img
+            class="_profile-picture w-10 h-10 sm:w-56 sm:h-56 mr-4"
+            src="/martin.jpg"
+            alt="Avatar"
+          />
           <div class="flex-col pl-0 sm:pl-4 pr-0 sm:pr-8 md:pr-12 lg:pr-24">
             <p class="text-h4">
               {{ bio }}
@@ -36,7 +40,7 @@
           </div>
           <div class="flex mt-2 sm:flex-row-reverse">
             <img
-              class="w-10 h-10 sm:w-56 sm:h-56 rounded-full mr-4 sm:mr-0"
+              class="_profile-picture w-10 h-10 sm:w-56 sm:h-56 mr-4 sm:mr-0"
               src="/martin.jpg"
               alt="Avatar"
             />
@@ -59,6 +63,11 @@
 </template>
 
 <style lang="sass" scoped>
+.about-us-section
+  ._profile-picture
+    flex-shrink: 0
+    border-radius: 100%
+    object-fit: cover
 </style>
 
 <script>

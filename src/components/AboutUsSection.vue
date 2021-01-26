@@ -9,21 +9,25 @@
         <div class="flex mt-2">
           <img
             class="_profile-picture w-10 h-10 sm:w-56 sm:h-56 mr-4"
-            src="/martin.jpg"
+            :src="photoUrl"
             alt="Avatar"
           />
           <div class="flex-col pl-0 sm:pl-4 pr-0 sm:pr-8 md:pr-12 lg:pr-24">
             <p class="text-h4">
               {{ bio }}
             </p>
-            <div class="flex flex-wrap items-center mt-6">
-              <a href="https://twitter.com/Mesqueeb" class="flex items-center lg:mr-5">
-                <img class="h-6 sm:h-12" src="/Twitter_Logo.svg" alt="Twitter Logo" />
-                <p class="text-h4 ml-1 mr-6">Twitter</p>
-              </a>
-              <a href="https://github.com/mesqueeb" class="flex items-center">
+            <div class="flex items-center mt-6">
+              <a
+                v-if="github"
+                :href="`https://github.com/${github}`"
+                class="flex items-center mr-5"
+              >
                 <img class="h-4 sm:h-8" src="/Github_Mark.svg" />
                 <p class="text-h4 ml-3">Github</p>
+              </a>
+              <a v-if="twitter" :href="`https://twitter.com/${twitter}`" class="flex items-center">
+                <img class="h-6 sm:h-12" src="/Twitter_Logo.svg" alt="Twitter Logo" />
+                <p class="text-h4 ml-1">Twitter</p>
               </a>
             </div>
           </div>
@@ -41,7 +45,7 @@
           <div class="flex mt-2 sm:flex-row-reverse">
             <img
               class="_profile-picture w-10 h-10 sm:w-56 sm:h-56 mr-4 sm:mr-0"
-              src="/martin.jpg"
+              :src="photoUrl"
               alt="Avatar"
             />
             <div class="flex-col pl-0 pr-0 sm:pl-8 md:pl-12 lg:pl-24 sm:pr-4">
@@ -49,9 +53,21 @@
                 {{ bio }}
               </p>
               <div class="flex items-center mt-6">
-                <a href="https://github.com/mesqueeb" class="flex items-center">
+                <a
+                  v-if="github"
+                  :href="`https://github.com/${github}`"
+                  class="flex items-center mr-5"
+                >
                   <img class="h-4 sm:h-8" src="/Github_Mark.svg" />
                   <p class="text-h4 ml-3">Github</p>
+                </a>
+                <a
+                  v-if="twitter"
+                  :href="`https://twitter.com/${twitter}`"
+                  class="flex items-center"
+                >
+                  <img class="h-6 sm:h-12" src="/Twitter_Logo.svg" alt="Twitter Logo" />
+                  <p class="text-h4 ml-1">Twitter</p>
                 </a>
               </div>
             </div>
@@ -76,6 +92,11 @@ export default {
   props: {
     name: { type: String, required: true },
     bio: { type: String, required: true },
+    photoUrl: { type: String, required: true },
+    /** username */
+    twitter: { type: String, default: '' },
+    /** username */
+    github: { type: String, default: '' },
     /**
      * @type {'right' | 'left'}
      */

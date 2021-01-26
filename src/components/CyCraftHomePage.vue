@@ -116,8 +116,21 @@
       <!-- About Us -->
       <div class="mx-6 mt-72">
         <div class="text-h2">{{ txt.chapterAboutUs }}</div>
-        <AboutUsSection imgPosition="left" :bio="txt.bioLuca" :name="txt.nameLuca" />
-        <AboutUsSection imgPosition="right" :bio="txt.bioTadaki" :name="txt.nameTadaki" />
+        <AboutUsSection
+          imgPosition="left"
+          :bio="txt.bioLuca"
+          :name="txt.nameLuca"
+          github="mesqueeb"
+          twitter="mesqueeb"
+          photoUrl="/photos/LB.jpg"
+        />
+        <AboutUsSection
+          imgPosition="right"
+          :bio="txt.bioTadaki"
+          :name="txt.nameTadaki"
+          github="tdk0718"
+          photoUrl="/photos/TM.jpg"
+        />
       </div>
       <!-- Contact Us logo -->
       <div class="mx-10 mt-48 sm:mt-72 pb-8 flex flex-col items-center">

@@ -7,89 +7,73 @@ export const lang = {
     ja: 'Contact Us',
     en: 'Contact Us',
   },
-  projectsTitle: {
+  chapterProjects: {
     ja: 'Our Projects',
     en: 'Our Projects',
   },
-  pepiconsTitle: {
-    ja: 'Pepicons',
-    en: 'Pepicons',
-  },
-  cinematchTitle: {
-    ja: 'Cinematch',
-    en: 'Cinematch',
-  },
-  UBITitle: {
-    ja: 'UBI Calculator',
-    en: 'UBI Calculator',
-  },
-  peerLearningTitle: {
-    ja: 'Peer Learning',
-    en: 'Peer Learning',
-  },
-  pepIconsDescription: {
+  descriptionPepicons: {
     ja:
       'Pepiconsは、総数118個の完全オリジナルアイコンパッケージです。 このアイコンセットには、POP!バージョン とPrintバージョンの2種類のバリエーションがあり、どちらもレトロな雰囲気を基調としたアイコンセットになっています。 ウェブサイトのライブプレビューでは、このパックが提供するすべてのアイコンを試用すことができます。',
     en:
       'Pepicons is a grand total of 118 hand-crafted icons — and counting! This completely original icon set is made in two retro variants: Pop! and Print. A live preview on the website allows you to play around with all the variations the icon pack has to offer.',
   },
-  cinematchDescription: {
+  descriptionCM: {
     ja:
       'CineMatchでは、映画のウォッチリストを作成して友達と共有することができます。 このアプリのユーザーインターフェースは、美しく見やすさを追求したものになっています。',
     en:
       'With the help of CineMatch a user can create film watchlists and share them with friends. This neat app has a clean user interface that organizes the user’s lists beautifully and with simplicity.',
   },
-  UBICalculatorDescription: {
+  descriptionUBI: {
     ja:
       'ベーシックインカムでどれだけ利益を得ているのか疑問に思ったことはありませんか？ UBI Calculatorでは、さまざまなUBIプランで得た収益を正確に把握できるようにするオリジナルプラグインです。',
     en:
       'Ever wonder how you might benefit through a Universal Basic Income The UBI Calculator is an ingenius plugin that allows a user to calculate their exact earnings with different UBI plans.',
   },
-  peerLearningDescription: {
+  descriptionPL: {
     ja:
       'PeerLearningは、学生達が協力して互いに学び合うためのオンライン教育ソフトです。 教育分野の助成金によって資金提供を受けているこのソフトには、（ここから微妙→）現在のユーザーテストの利点があります。',
     en:
       'PeerLearning is an online education software bringing students together to collaborate and learn from one another. Funded by education-focused grants, this software has the benefit of current user testing.',
   },
-  designTitle: {
+  howWeDesign: {
     ja: 'How we design',
     en: 'How we design',
   },
-  designSubTitle: {
+  howWeDesignSubtext: {
     ja: 'ユーザーの意図を明確にとらえたデザインで、ユーザーの理想を実現します。',
     en: 'With clarity and focus, we enable the user to engage with purpose.',
   },
-  codeTitle: {
+  howWeCode: {
     ja: 'How we code',
     en: 'How we code',
   },
-  codeSubTitle: {
+  howWeCodeSubtext: {
     japanese: 'シンプルでモダン、そして適応性の高いコードでデザインの美しさを表現します。',
     en: 'Matching the beauty of the design, our code is modern, concise, and adaptive.',
   },
-  aboutUs: {
+  chapterAboutUs: {
     ja: 'About Us',
     en: 'About Us',
   },
-  lucaName: {
-    ja: 'Luca Ban',
+  nameLuca: {
+    ja: 'バン・ルカ',
     en: 'Luca Ban',
   },
-  lucaBio: {
+  bioLuca: {
     ja: 'japanese',
     en:
       'Has been a technology enthusiast since birth. He thinks of writing code as nothing less than poetry. Believes everything is possible — talent is a skill you teach yourself.',
   },
-  tadakiName: {
-    ja: 'Tadaki Matsushita',
+  nameTadaki: {
+    ja: '松下忠己',
     en: 'Tadaki Matsushita',
   },
-  tadakiBio: {
+  bioTadaki: {
     ja: 'japanese',
     en:
       'Self taught coder. He has helped companies all over Japan turn their vision into code. Excels at web marketing; and currently loves automation.',
   },
-  frameworksSectionTitle: {
+  chapterFrameworks: {
     ja: 'Frameworks',
     en: 'Frameworks',
   },

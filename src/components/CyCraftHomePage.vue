@@ -39,41 +39,41 @@
       <!-- Projects Section -->
       <div class="mx-0 sm:mx-10 mt-48 sm:mt-64">
         <!-- Section Title -->
-        <div class="pl-6 sm:pl-0 text-h2 mb-6">{{ txt.projectsTitle }}</div>
+        <div class="pl-6 sm:pl-0 text-h2 mb-6">{{ txt.chapterProjects }}</div>
         <!-- Project Grid -->
         <div class="grid gap-10 md:gap-20 grid-cols-1">
           <CyProject
-            :title="txt.pepiconsTitle"
+            title="Pepicons"
             img="/pepicons.png"
             url="https://pepicons.com/"
             linkText="pepicons.com"
-            :description="txt.pepIconsDescription"
+            :description="txt.descriptionPepicons"
           />
           <CyProject
-            :title="txt.cinematchTitle"
+            title="CineMatch"
             img="/cinematch.png"
-            url="https://pepicons.com/"
+            url="https://cine-match.com"
             linkText="cinematch.com"
-            :description="txt.cinematchDescription"
+            :description="txt.descriptionCM"
           />
           <CyProject
-            :title="txt.UBITitle"
+            title="UBI Calculator"
             img="/ubi.png"
-            url="https://pepicons.com/"
+            url="http://ubicalculator.com"
             linkText="ubi-calculator.com"
-            :description="txt.UBICalculatorDescription"
+            :description="txt.descriptionUBI"
           />
           <CyProject
-            :title="txt.peerLearningTitle"
+            title="Peer Learning"
             img="/peer-learning.png"
-            url="https://pepicons.com/"
+            url="https://peerlearning.net/"
             linkText="peer-learning.com"
-            :description="txt.peerLearningDescription"
+            :description="txt.descriptionPL"
           />
         </div>
       </div>
       <div class="mx-0 sm:mx-10 mt-48 sm:mt-64">
-        <div class="text-h2 pl-6 sm:pl-0 text-left">{{ txt.frameworksSectionTitle }}</div>
+        <div class="text-h2 pl-6 sm:pl-0 text-left">{{ txt.chapterFrameworks }}</div>
       </div>
       <FrameworksMobile
         class="sm:hidden mt-20"
@@ -93,21 +93,21 @@
         <div class="flex flex-col">
           <div class="" style="max-width: 403px">
             <div class="flex pb-4">
-              <div class="text-h2">{{ txt.designTitle }}</div>
+              <div class="text-h2">{{ txt.howWeDesign }}</div>
               <img class="w-5 ml-2 sm:w-10 sm:ml-6" src="/cy-icon-white.svg" alt="" />
             </div>
             <div class="text-h4">
-              {{ txt.designSubTitle }}
+              {{ txt.howWeDesignSubtext }}
             </div>
           </div>
           <div class="mt-16 sm:mt-24 flex justify-end">
             <div style="max-width: 403px">
               <div class="flex pb-4 justify-end sm:justify-start">
-                <div class="text-h2">{{ txt.codeTitle }}</div>
+                <div class="text-h2">{{ txt.howWeCode }}</div>
                 <img class="w-5 ml-2 sm:w-10 sm:ml-6" src="/cy-icon-white.svg" alt="" />
               </div>
               <div class="text-h4 text-right sm:text-left">
-                {{ txt.codeSubTitle }}
+                {{ txt.howWeCodeSubtext }}
               </div>
             </div>
           </div>
@@ -115,9 +115,9 @@
       </div>
       <!-- About Us -->
       <div class="mx-6 mt-72">
-        <div class="text-h2">{{ txt.aboutUs }}</div>
-        <AboutUsSection imgPosition="left" :bio="txt.lucaBio" :name="txt.lucaName" />
-        <AboutUsSection imgPosition="right" :bio="txt.tadakiBio" :name="txt.tadakiName" />
+        <div class="text-h2">{{ txt.chapterAboutUs }}</div>
+        <AboutUsSection imgPosition="left" :bio="txt.bioLuca" :name="txt.nameLuca" />
+        <AboutUsSection imgPosition="right" :bio="txt.bioTadaki" :name="txt.nameTadaki" />
       </div>
       <!-- Contact Us logo -->
       <div class="mx-10 mt-48 sm:mt-72 pb-8 flex flex-col items-center">
@@ -126,7 +126,7 @@
         </a>
         <div
           v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"
-          class="contact-us-underline"
+          class="contact-us-underline js-underline"
         ></div>
       </div>
       <!-- English or Japanese -->
@@ -177,7 +177,7 @@
 .contact-us-underline
   background: white
   height: 8px
-  width: 5%
+  width: 100%
   margin-top: 24px
 </style>
 
@@ -225,6 +225,8 @@ export default {
     show: false,
     showingContactDialog: false,
     japanese: false,
+    underlineIsAnimating: false,
+    underlineIsExpanded: false,
     intersectionOptions: {
       root: null,
       rootMargin: '0px 0px 0px 0px',
@@ -237,12 +239,6 @@ export default {
       const selectedLang = this.japanese ? 'ja' : 'en'
 
       const formattedLang = Object.entries(lang).reduce((result, [key, value]) => {
-        // [key, value]
-        // key === 'frameworkMobileBlitzarDescription'
-        // value === {
-        //   ja: 'japanese',
-        //   en: 'A flexible component collection allowing for blitzing fast prototyping with VueJS',
-        // }
         result[key] = value[selectedLang]
         return result
       }, {})
@@ -266,27 +262,42 @@ export default {
       })
     },
     animateContactUsUnderline() {
+      if (this.underlineIsAnimating) return
+      if (this.underlineIsExpanded) return
+      this.underlineIsAnimating = true
       anime({
-        targets: '.contact-us-underline',
+        targets: '.js-underline',
         loop: false,
-        width: '100%', // -> from '5%' to '100%',
+        scaleX: '1', // -> from '5%' to '100%',
         easing: 'easeInOutQuad',
         duration: 1000,
+        complete: () => {
+          this.underlineIsAnimating = false
+          this.underlineIsExpanded = true
+        },
       })
     },
     undoAnimateContactUsUnderline() {
+      if (this.underlineIsAnimating) return
+      if (!this.underlineIsExpanded) return
+      this.underlineIsAnimating = true
       anime({
-        targets: '.contact-us-underline',
+        targets: '.js-underline',
         loop: false,
-        width: '5%', // -> from '100%' to '5%',
+        scaleX: '0.05', // -> from '100%' to '5%',
         easing: 'easeInOutQuad',
-        duration: 1000,
+        duration: 100,
+        complete: () => {
+          this.underlineIsAnimating = false
+          this.underlineIsExpanded = false
+        },
       })
     },
     onWaypoint({ going }) {
       // going: in, out
       if (going === this.$waypointMap.GOING_IN) {
         this.animateContactUsUnderline()
+        return
       }
 
       if (going === this.$waypointMap.GOING_OUT) {

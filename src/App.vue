@@ -46,7 +46,7 @@
           class="side-glitch-8 blink-image-1"
           :class="{ showSideGlitch: !scrolling }"
         />
-        <CyCraftHomePage />
+        <CyCraftHomePage :scrolling="scrolling" />
       </div>
     </transition>
   </div>
@@ -276,6 +276,7 @@ export default {
     return {
       scrolling: false,
       loading: false,
+      timeout: null,
     }
   },
   computed: {},
@@ -288,10 +289,12 @@ export default {
   },
   methods: {
     handleScroll() {
+      if (this.timeout) clearTimeout(this.timeout)
       this.scrolling = true
     },
     handleScrollingStopped() {
-      this.scrolling = false
+      if (this.timeout) clearTimeout(this.timeout)
+      this.timeout = setTimeout(() => (this.scrolling = false), 200)
     },
   },
 }

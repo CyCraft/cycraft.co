@@ -1,8 +1,4 @@
 export const lang = {
-  pageTitle: {
-    ja: 'We Craft without cruft.',
-    en: 'We Craft without cruft.',
-  },
   pageSubTitle: {
     japanese: '洗練されたアプリの創造で、より良いウェブの世界を目指す。',
     en: 'We craft beautiful apps and strive for a better web.',

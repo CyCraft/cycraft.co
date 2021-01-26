@@ -19,13 +19,17 @@
             d="M11.332,2.734V0h-8.5V2.734H0v8.2H2.832V13.9H5.9V10.937H8.5V13.9h3.07V10.937H17v-8.2Zm-2.595,5.7H5.9V5.7H8.737Zm5.43,0H11.332V5.7h2.835Z"
           />
         </svg>
-        <span>
+        <CyTextGlitch
+          :value="isGlitching"
+          :onButton="true"
+          :style="isGlitching ? 'transition: font-size 2s linear; font-size: 1.2em' : ''"
+        >
           <slot></slot>
-        </span>
+        </CyTextGlitch>
       </div>
     </div>
     <canvas
-      v-show="hover"
+      v-show="isGlitching"
       :id="id"
       class="absolute top-0"
       style="z-index: 1; margin-left: -7px; margin-top: -7px"
@@ -40,8 +44,11 @@
 </style>
 
 <script>
+import CyTextGlitch from './CyTextGlitch.vue'
+
 export default {
   name: 'CyButton',
+  components: { CyTextGlitch },
   inheritAttrs: false,
   props: {
     hasGlitch: { type: Boolean, default: false },
@@ -49,7 +56,7 @@ export default {
   data() {
     return {
       id: `${Math.random()}`,
-      hover: false,
+      isGlitching: false,
     }
   },
   mounted() {
@@ -105,11 +112,11 @@ export default {
   methods: {
     setHoverOn() {
       if (!this.hasGlitch) return
-      this.hover = true
+      this.isGlitching = true
     },
     setHoverOff() {
       if (!this.hasGlitch) return
-      this.hover = false
+      this.isGlitching = false
     },
   },
 }

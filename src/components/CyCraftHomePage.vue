@@ -24,7 +24,7 @@
         <!-- Title Text & Button-->
         <div class="flex-col pt-10 px-10 mt-16 sm:mt-32 sm:mr-4">
           <div class="landing-page-title" style="max-width: 300px">
-            {{ txt.pageTitle }}
+            We <CyTextGlitch :value="scrolling">craft</CyTextGlitch> without cruft.
           </div>
           <div class="landing-page-subtitle pt-6" style="max-width: 370px">
             {{ txt.pageSubTitle }}
@@ -183,6 +183,11 @@
 </style>
 
 <script>
+import anime from 'animejs/lib/anime.es.js'
+import Vue from 'vue'
+import VueWaypoint from 'vue-waypoint'
+import smoothscroll from 'smoothscroll-polyfill'
+import CyTextGlitch from './CyTextGlitch.vue'
 import CyToggle from './CyToggle.vue'
 import Monster from './Monster.vue'
 import CyButton from './CyButton.vue'
@@ -192,12 +197,6 @@ import FrameworksMobile from './FrameworksMobile.vue'
 import FrameworksDesktop from './FrameworksDesktop.vue'
 import ContactDialog from './ContactDialog.vue'
 import CyModal from './CyModal.vue'
-
-import anime from 'animejs/lib/anime.es.js'
-import Vue from 'vue'
-import VueWaypoint from 'vue-waypoint'
-import smoothscroll from 'smoothscroll-polyfill'
-
 import { lang } from './lang.js'
 
 // Waypoint plugin
@@ -215,7 +214,10 @@ export default {
     FrameworksDesktop,
     ContactDialog,
     CyModal,
+    CyTextGlitch,
   },
+
+  props: { scrolling: Boolean },
 
   data: () => ({
     show: false,

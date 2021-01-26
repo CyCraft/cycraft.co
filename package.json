@@ -15,7 +15,8 @@
     "lottie-web": "^5.7.6",
     "smoothscroll-polyfill": "^0.4.4",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-    "vue": "^2.6.12"
+    "vue": "^2.6.12",
+    "vue-text-glitch": "^1.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.11",

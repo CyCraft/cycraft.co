@@ -8,10 +8,10 @@
     <div class="flex-col min-width-full justify-center" style="max-width: 1100px">
       <!-- Mobile Header -->
       <div class="sm:hidden flex content-center justify-between p-3">
-        <div class="flex items-center">
-          <Monster />
+        <Monster />
+        <div>
+          <Wordmark height="20" style="opacity: 0.1" />
         </div>
-        <!-- <button class="text-xl text-white" @click="contactUs">Contact</button> -->
       </div>
       <!-- Hero -->
       <div class="flex">
@@ -186,6 +186,7 @@ import anime from 'animejs/lib/anime.es.js'
 import Vue from 'vue'
 import VueWaypoint from 'vue-waypoint'
 import smoothscroll from 'smoothscroll-polyfill'
+import Wordmark from './SVGs/Wordmark.vue'
 import CyTextGlitch from './CyTextGlitch.vue'
 import CyToggle from './CyToggle.vue'
 import Monster from './Monster.vue'
@@ -215,6 +216,7 @@ export default {
     ContactDialog,
     CyModal,
     CyTextGlitch,
+    Wordmark,
   },
 
   props: { scrolling: Boolean },

@@ -38,7 +38,7 @@
       />
       <img
         src="/SideGlitchAlt7.png"
-        class="side-glitch-7 blink-image 3"
+        class="side-glitch-7 blink-image-3"
         :class="{ showSideGlitch: !scrolling }"
       />
       <img
@@ -224,7 +224,7 @@ body
 .side-glitch-4
   position: absolute
   left: 0
-  top: 3300px
+  top: 4000px
 
 .side-glitch-5
   position: absolute

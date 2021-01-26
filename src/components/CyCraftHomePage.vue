@@ -1,6 +1,6 @@
 <template>
   <div class="bg-black flex justify-center h-auto">
-    <transition name="fade">
+    <transition name="fade-dialog">
       <CyModal v-if="showingContactDialog" :active="showingContactDialog" @close="closeContact">
         <ContactDialog />
       </CyModal>
@@ -162,10 +162,10 @@
 <style lang="sass">
 @import './src/assets/typography.sass'
 
-.fade-enter-active, .fade-leave-active
+.fade-dialog-enter-active, .fade-dialog-leave-active
   transition: opacity .2s ease
 
-.fade-enter, .fade-leave-to
+.fade-dialog-enter, .fade-dialog-leave-to
   opacity: 0
 
 .landing-page-title

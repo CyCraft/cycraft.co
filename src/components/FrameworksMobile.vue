@@ -1,6 +1,6 @@
 <template>
   <div>
-    <transition name="fade">
+    <transition name="fade-dialog">
       <CyModal v-if="showingFrameworkCard" :active="showingFrameworkCard" @close="closeModal">
         <div class="flex flex-col items-center" style="padding: 1rem">
           <FrameworkCard

@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="h-full w-full">
-    <transition name="fade">
+    <transition name="fade-loading-animation">
       <LoadingAnimation v-if="loading" class="_loading-wall" />
     </transition>
     <div :class="`_app ${loading ? '_loading' : ''} flex justify-center`">
@@ -70,10 +70,10 @@
   touch-action: none
   z-index: 2
 
-.fade-enter-active, .fade-leave-active
+.fade-loading-animation-enter-active, .fade-loading-animation-leave-active
   transition: opacity 300ms
 
-.fade-enter, .fade-leave-to
+.fade-loading-animation-enter, .fade-loading-animation-leave-to
   opacity: 0
 
 body

@@ -29,7 +29,7 @@
     </div>
 
     <div style="min-height: 480px" class="mt-6">
-      <transition name="icon-fade">
+      <transition name="fade-framework-line">
         <div v-show="magnetar" id="magnetar">
           <div class="flex flex-row">
             <div class="w-1/2 flex flex-row" style="padding-left: 107px">
@@ -59,7 +59,7 @@
         </div>
       </transition>
 
-      <transition name="icon-fade">
+      <transition name="fade-framework-line">
         <div v-show="blitzar" id="blitzar">
           <div class="flex flex-row">
             <div class="w-1/2"></div>
@@ -87,7 +87,7 @@
           </div>
         </div>
       </transition>
-      <transition name="icon-fade">
+      <transition name="fade-framework-line">
         <div v-show="planetar" id="planetar">
           <div class="flex flex-row">
             <div class="w-1/2"></div>
@@ -120,14 +120,14 @@
 </template>
 
 <style lang="sass" scoped>
-.icon-fade-enter-active
+.fade-framework-line-enter-active
   transition: all 1.5s ease
 
-.icon-fade-leave-active
+.fade-framework-line-leave-active
   transition: all 0.3s ease // also update FADE_OUT_MS
 
-.icon-fade-enter,
-.icon-fade-leave-to
+.fade-framework-line-enter,
+.fade-framework-line-leave-to
   opacity: 0
 
 ._mbp-logos-wrapper

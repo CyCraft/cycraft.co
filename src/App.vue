@@ -1,54 +1,53 @@
 <template>
-  <div class="h-full w-full">
+  <div id="app" class="h-full w-full">
     <transition name="fade">
-      <LoadingAnimation v-if="loading" />
-
-      <div v-else id="app" class="bg-black flex justify-center">
-        <!-- Left glitches descending order -->
-        <img
-          src="/SideGlitchAlt3.png"
-          class="side-glitch-1 blink-image-1"
-          :class="{ showSideGlitch: !scrolling }"
-        />
-        <img
-          src="/SideGlitchAlt1.png"
-          class="side-glitch-2 blink-image-3"
-          :class="{ showSideGlitch: !scrolling }"
-        />
-        <img
-          src="/SideGlitchAlt2.png"
-          class="side-glitch-3 blink-image-2"
-          :class="{ showSideGlitch: !scrolling }"
-        />
-        <img
-          src="/SideGlitchAlt4.png"
-          class="side-glitch-4 blink-image-3"
-          :class="{ showSideGlitch: !scrolling }"
-        />
-        <!-- Right glitches descending order -->
-        <img
-          src="/SideGlitchAlt5.png"
-          class="side-glitch-5 blink-image-2"
-          :class="{ showSideGlitch: !scrolling }"
-        />
-        <img
-          src="/SideGlitchAlt6.png"
-          class="side-glitch-6 blink-image-1"
-          :class="{ showSideGlitch: !scrolling }"
-        />
-        <img
-          src="/SideGlitchAlt7.png"
-          class="side-glitch-7 blink-image 3"
-          :class="{ showSideGlitch: !scrolling }"
-        />
-        <img
-          src="/SideGlitchAlt8.png"
-          class="side-glitch-8 blink-image-1"
-          :class="{ showSideGlitch: !scrolling }"
-        />
-        <CyCraftHomePage :scrolling="scrolling" />
-      </div>
+      <LoadingAnimation v-if="loading" class="_loading-wall" />
     </transition>
+    <div :class="`_app ${loading ? '_loading' : ''} flex justify-center`">
+      <!-- Left glitches descending order -->
+      <img
+        src="/SideGlitchAlt3.png"
+        class="side-glitch-1 blink-image-1"
+        :class="{ showSideGlitch: !scrolling }"
+      />
+      <img
+        src="/SideGlitchAlt1.png"
+        class="side-glitch-2 blink-image-3"
+        :class="{ showSideGlitch: !scrolling }"
+      />
+      <img
+        src="/SideGlitchAlt2.png"
+        class="side-glitch-3 blink-image-2"
+        :class="{ showSideGlitch: !scrolling }"
+      />
+      <img
+        src="/SideGlitchAlt4.png"
+        class="side-glitch-4 blink-image-3"
+        :class="{ showSideGlitch: !scrolling }"
+      />
+      <!-- Right glitches descending order -->
+      <img
+        src="/SideGlitchAlt5.png"
+        class="side-glitch-5 blink-image-2"
+        :class="{ showSideGlitch: !scrolling }"
+      />
+      <img
+        src="/SideGlitchAlt6.png"
+        class="side-glitch-6 blink-image-1"
+        :class="{ showSideGlitch: !scrolling }"
+      />
+      <img
+        src="/SideGlitchAlt7.png"
+        class="side-glitch-7 blink-image 3"
+        :class="{ showSideGlitch: !scrolling }"
+      />
+      <img
+        src="/SideGlitchAlt8.png"
+        class="side-glitch-8 blink-image-1"
+        :class="{ showSideGlitch: !scrolling }"
+      />
+      <CyCraftHomePage :scrolling="scrolling" />
+    </div>
   </div>
 </template>
 
@@ -56,8 +55,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;800&display=swap')
 @import './assets/styles.css'
 
+._app
+  background: black
+  &._loading
+    position: fixed
+    width: 100vw
+    height: 100vh
+    overflow: hidden
+._loading-wall
+  height: 100vh
+  width: 100vw
+  position: fixed
+  touch-action: none
+  z-index: 2
+
 .fade-enter-active, .fade-leave-active
-  transition: opacity 1s
+  transition: opacity 300ms
 
 .fade-enter, .fade-leave-to
   opacity: 0
@@ -275,7 +288,7 @@ export default {
   data() {
     return {
       scrolling: false,
-      loading: false,
+      loading: true,
       timeout: null,
     }
   },

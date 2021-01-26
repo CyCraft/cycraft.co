@@ -199,6 +199,7 @@ import ContactDialog from './ContactDialog.vue'
 import CyModal from './CyModal.vue'
 import { lang } from './lang.js'
 
+smoothscroll.polyfill()
 // Waypoint plugin
 Vue.use(VueWaypoint)
 
@@ -247,9 +248,6 @@ export default {
 
       return formattedLang
     },
-  },
-  mounted() {
-    smoothscroll.polyfill()
   },
   methods: {
     contactUs() {

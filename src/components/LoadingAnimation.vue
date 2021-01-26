@@ -1,7 +1,7 @@
 <template>
-  <div class="h-full flex flex-col justify-center items-center bg-black">
+  <div class="h-full w-full flex flex-col justify-center items-center bg-black">
     <div id="loading-animation" class="w-auto bg-black">
-      <img src="cycraft-loading-min.gif" alt="loading animation" />
+      <img src="/cycraft-loading-min.gif" alt="loading animation" />
     </div>
   </div>
 </template>

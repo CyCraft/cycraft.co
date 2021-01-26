@@ -3,8 +3,7 @@
     :href="url"
     class="framework-card-box border border-white border-solid relative overflow-hidden"
     :class="isMobile ? '_mobile' : ''"
-    style="height: 88px; position: relative; display: block"
-    :style="isMobile ? 'width: 100%;' : 'width: 250px;'"
+    style="height: 88px; position: relative; display: block; width: 250px"
   >
     <div class="px-2" style="position: absolute; left: 0; top: 50%; transform: translate(0, -50%)">
       <div class="text-h3 pl-4">{{ title }}</div>
@@ -14,16 +13,19 @@
     </div>
     <PlanetarFrameworkCardSvg
       v-show="title === 'planetar'"
+      :draggable="false"
       class="absolute"
       style="bottom: -2px; right: -25px"
     />
     <MagnetarFrameworkCardSvg
       v-show="title === 'magnetar'"
+      :draggable="false"
       class="absolute"
       style="bottom: -2px; right: -55px"
     />
     <BlitzarFrameworkCardSvg
       v-show="title === 'blitzar'"
+      :draggable="false"
       class="absolute"
       style="bottom: -2px; right: -5px"
     />

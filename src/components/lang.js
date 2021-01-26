@@ -77,36 +77,32 @@ export const lang = {
     ja: 'Frameworks',
     en: 'Frameworks',
   },
-  frameworkDesktopPlanetarDescription: {
+  descriptionPlanetar: {
     ja:
       'この軽快なVueフレームワークは、リアルタイムに反映されるスタイルガイドを自動生成します。 開発者とデザイナーの相互の創造と開発をより強力にするコンポーネントエクスプローラーが利用できます。',
     en:
       'This nimble Vue framework creates an auto-generated, living style guide. The styleguide comes complete with an interactive component explorer that both developers and designers will love.',
   },
-  frameworkDesktopMagnetarDescriptionTitle: {
-    ja: 'あなたが望むデータがここに。',
-    en: 'Your data, where you want.',
-  },
-  frameworkDesktopMagnetarDescription: {
+  descriptionMagnetar: {
     ja:
-      'このフレームワークに依存しない同期ソリューションは、任意のDBまたはAPIに自動的に接続し、ローカルでデータを整理・保持しておくことができます。 さらに、直感的でシンプルなUIが組み込まれています。',
+      'あなたが望むデータがここに。\n\nこのフレームワークに依存しない同期ソリューションは、任意のDBまたはAPIに自動的に接続し、ローカルでデータを整理・保持しておくことができます。 さらに、直感的でシンプルなUIが組み込まれています。',
     en:
-      'This framework-agnostic syncing solution can automatically connect to any DB or API and keep your data organised for you in a local data store. Plus, it’s got optimistic-UI built right in.',
+      'Your data, where you want.\n\nThis framework-agnostic syncing solution can automatically connect to any DB or API and keep your data organised for you in a local data store. Plus, it’s got optimistic-UI built right in.',
   },
-  frameworkDesktopBlitzarDescription: {
+  descriptionBlitzar: {
     ja: 'Blitzarは、VueJSで高速プロトタイピングを可能にする柔軟なコンポーネントコレクションです。',
     en:
       'Blitzar is a flexible component collection allowing for blitzing fast prototyping with VueJS.',
   },
-  frameworkMobilePlanetarDescription: {
+  descriptionPlanetarShort: {
     ja: 'japanese',
     en: 'This nimble Vue framework creates an auto-generated, living style guide.',
   },
-  frameworkMobileMagnetarDescription: {
+  descriptionMagnetarShort: {
     ja: 'japanese',
     en: 'Magnetar is a framework-agnostic syncing solution that keeps your data where you need it.',
   },
-  frameworkMobileBlitzarDescription: {
+  descriptionBlitzarShort: {
     ja: 'japanese',
     en: 'A flexible component collection allowing for blitzing fast prototyping with VueJS.',
   },

@@ -53,8 +53,7 @@
                 textUrl="magnetar.cycraft.co"
                 url="https://magnetar.cycraft.co"
               />
-              <div class="text-body1 mt-4">{{ magnetarDescriptionTitle }}</div>
-              <div class="text-body1 mt-4">{{ magnetarDescription }}</div>
+              <div class="text-body1 mt-4 text-wrap-all">{{ descriptionMagnetar }}</div>
             </div>
           </div>
         </div>
@@ -83,7 +82,7 @@
                 textUrl="blitzar.cycraft.co"
                 url="https://blitzar.cycraft.co"
               />
-              <div class="text-body1 mt-4">{{ blitzarDescription }}</div>
+              <div class="text-body1 mt-4 text-wrap-all">{{ descriptionBlitzar }}</div>
             </div>
           </div>
         </div>
@@ -111,7 +110,7 @@
                 textUrl="planetar.cyraft.co"
                 url="https://github.com/CyCraft/planetar"
               />
-              <div class="text-body1 mt-4">{{ planetarDescription }}</div>
+              <div class="text-body1 mt-4 text-wrap-all">{{ descriptionPlanetar }}</div>
             </div>
           </div>
         </div>
@@ -158,26 +157,9 @@ export default {
     FrameworkCard,
   },
   props: {
-    sectionTitle: {
-      type: String,
-      default: 'Frameworks',
-    },
-    planetarDescription: {
-      type: String,
-      required: true,
-    },
-    magnetarDescriptionTitle: {
-      type: String,
-      required: true,
-    },
-    magnetarDescription: {
-      type: String,
-      required: true,
-    },
-    blitzarDescription: {
-      type: String,
-      required: true,
-    },
+    descriptionPlanetar: { type: String, required: true },
+    descriptionMagnetar: { type: String, required: true },
+    descriptionBlitzar: { type: String, required: true },
   },
   data() {
     return {

@@ -77,16 +77,18 @@
       </div>
       <FrameworksMobile
         class="sm:hidden mt-20"
-        :planetarDescription="txt.frameworkMobilePlanetarDescription"
-        :magnetarDescription="txt.frameworkMobileMagnetarDescription"
-        :blitzarDescription="txt.frameworkMobileBlitzarDescription"
+        :descriptionPlanetarShort="txt.descriptionPlanetarShort"
+        :descriptionMagnetarShort="txt.descriptionMagnetarShort"
+        :descriptionBlitzarShort="txt.descriptionBlitzarShort"
+        :descriptionPlanetar="txt.descriptionPlanetar"
+        :descriptionMagnetar="txt.descriptionMagnetar"
+        :descriptionBlitzar="txt.descriptionBlitzar"
       />
       <FrameworksDesktop
         class="hidden sm:block mt-10 mx-10"
-        :planetarDescription="txt.frameworkDesktopPlanetarDescription"
-        :magnetarDescriptionTitle="txt.frameworkDesktopMagnetarDescriptionTitle"
-        :magnetarDescription="txt.frameworkDesktopMagnetarDescription"
-        :blitzarDescription="txt.frameworkDesktopBlitzarDescription"
+        :descriptionPlanetar="txt.descriptionPlanetar"
+        :descriptionMagnetar="txt.descriptionMagnetar"
+        :descriptionBlitzar="txt.descriptionBlitzar"
       />
       <!-- How we design and code -->
       <div class="mx-10" style="margin-top: 23rem">
@@ -161,7 +163,7 @@
 @import './src/assets/typography.sass'
 
 .fade-enter-active, .fade-leave-active
-  transition: opacity .5s ease
+  transition: opacity .2s ease
 
 .fade-enter, .fade-leave-to
   opacity: 0

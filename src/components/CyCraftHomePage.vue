@@ -44,28 +44,28 @@
         </div>
         <!-- Project Grid -->
         <div class="grid gap-10 md:gap-20 grid-cols-1">
-          <Project
+          <CyProject
             :title="txt.pepiconsTitle"
             img="/pepicons.png"
             url="https://pepicons.com/"
             linkText="pepicons.com"
             :description="txt.pepIconsDescription"
           />
-          <Project
+          <CyProject
             :title="txt.cinematchTitle"
             img="/cinematch.png"
             url="https://pepicons.com/"
             linkText="cinematch.com"
             :description="txt.cinematchDescription"
           />
-          <Project
+          <CyProject
             :title="txt.UBITitle"
             img="/ubi.png"
             url="https://pepicons.com/"
             linkText="ubi-calculator.com"
             :description="txt.UBICalculatorDescription"
           />
-          <Project
+          <CyProject
             :title="txt.peerLearningTitle"
             img="/peer-learning.png"
             url="https://pepicons.com/"
@@ -192,7 +192,7 @@ import CyToggle from './CyToggle.vue'
 import Monster from './Monster.vue'
 import CyButton from './CyButton.vue'
 import AboutUsSection from './AboutUsSection.vue'
-import Project from './Project.vue'
+import CyProject from './CyProject.vue'
 import FrameworksMobile from './FrameworksMobile.vue'
 import FrameworksDesktop from './FrameworksDesktop.vue'
 import ContactDialog from './ContactDialog.vue'
@@ -209,7 +209,7 @@ export default {
     Monster,
     CyButton,
     AboutUsSection,
-    Project,
+    CyProject,
     FrameworksMobile,
     FrameworksDesktop,
     ContactDialog,

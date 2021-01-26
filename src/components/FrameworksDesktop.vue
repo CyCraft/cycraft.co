@@ -51,7 +51,7 @@
               <FrameworkCard
                 title="magnetar"
                 textUrl="magnetar.cycraft.co"
-                url="https://google.com"
+                url="https://magnetar.cycraft.co"
               />
               <div class="text-body1 mt-4">{{ magnetarDescriptionTitle }}</div>
               <div class="text-body1 mt-4">{{ magnetarDescription }}</div>
@@ -81,7 +81,7 @@
               <FrameworkCard
                 title="blitzar"
                 textUrl="blitzar.cycraft.co"
-                url="https://google.com"
+                url="https://blitzar.cycraft.co"
               />
               <div class="text-body1 mt-4">{{ blitzarDescription }}</div>
             </div>
@@ -109,7 +109,7 @@
               <FrameworkCard
                 title="planetar"
                 textUrl="planetar.cyraft.co"
-                url="https://google.com"
+                url="https://github.com/CyCraft/planetar"
               />
               <div class="text-body1 mt-4">{{ planetarDescription }}</div>
             </div>

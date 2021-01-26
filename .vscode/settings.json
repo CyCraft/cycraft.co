@@ -3,7 +3,6 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  // "[vue]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[vue]": { "editor.defaultFormatter": "octref.vetur" },
   "[sass]": { "editor.defaultFormatter": "syler.sass-indented" },
   // make sure vetur is enabled
@@ -20,6 +19,7 @@
   // global important defaults
   "editor.tabSize": 2, // make sure this is the same as .prettierrc
   "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "editor.insertSpaces": true,
   // script

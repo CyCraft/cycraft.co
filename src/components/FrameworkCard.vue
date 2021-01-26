@@ -6,10 +6,7 @@
     style="height: 88px; position: relative; display: block"
     :style="isMobile ? 'width: 100%;' : 'width: 250px;'"
   >
-    <div
-      class="px-2"
-      style="position: absolute; left: 0; top: 50%; transform: translate(0, -50%)"
-    >
+    <div class="px-2" style="position: absolute; left: 0; top: 50%; transform: translate(0, -50%)">
       <div class="text-h3 pl-4">{{ title }}</div>
       <div class="text-body3 pl-4 flex">
         <div class="texturl">{{ textUrl }}</div>
@@ -32,6 +29,19 @@
     />
   </a>
 </template>
+
+<style lang="sass" scoped>
+.texturl
+  border-bottom: thin solid rgba(0,0,0,0)
+  transition: all 250ms ease
+.framework-card-box:hover .texturl
+  border-bottom: thin solid white
+
+.framework-card-box._mobile
+  .texturl
+    border-bottom: thin solid white
+</style>
+
 <script>
 import PlanetarFrameworkCardSvg from './SVGs/PlanetarFrameworkCardSvg'
 import MagnetarFrameworkCardSvg from './SVGs/MagnetarFrameworkCardSvg'
@@ -55,15 +65,3 @@ export default {
   },
 }
 </script>
-
-<style lang="sass" scoped>
-.texturl
-  border-bottom: thin solid rgba(0,0,0,0)
-  transition: all 250ms ease
-.framework-card-box:hover .texturl
-  border-bottom: thin solid white
-
-.framework-card-box._mobile
-  .texturl
-    border-bottom: thin solid white
-</style>

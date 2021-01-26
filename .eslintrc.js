@@ -13,5 +13,11 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'vue/no-unused-components': 'off',
     'vue/attribute-hyphenation': ['error', 'never'],
+    'vue/component-tags-order': [
+      'error',
+      {
+        order: ['template', 'style', 'script'],
+      },
+    ],
   },
 }

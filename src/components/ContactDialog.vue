@@ -17,12 +17,7 @@
         />
       </svg>
 
-      <img
-        v-else
-        class="h-10 w-10"
-        src="/cy-icon-white.svg"
-        alt=""
-      />
+      <img v-else class="h-10 w-10" src="/cy-icon-white.svg" alt="" />
     </div>
     <div class="mt-3 text-center sm:mt-5">
       <div class="mt-6">
@@ -39,10 +34,7 @@
         </a>
       </div>
       <div class="mt-2 grid grid-cols-3 gap-2">
-        <CyButton
-          class="col-span-1"
-          @click="copy"
-        >Copy</CyButton>
+        <CyButton class="col-span-1" @click="copy">Copy</CyButton>
         <span class="col-span-2 bg-gray-100 flex flex-row justify-center">
           <input
             id="copy-email"
@@ -56,9 +48,10 @@
     </div>
   </div>
   <!-- end -->
-
 </template>
 
+<style lang="sass" scoped>
+</style>
 
 <script>
 import CyButton from './CyButton'

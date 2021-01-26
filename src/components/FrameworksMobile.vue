@@ -1,11 +1,7 @@
 <template>
   <div>
     <transition name="fade">
-      <CyModal
-        v-if="showingFrameworkCard"
-        :active="showingFrameworkCard"
-        @close="closeModal"
-      >
+      <CyModal v-if="showingFrameworkCard" :active="showingFrameworkCard" @close="closeModal">
         <FrameworkCard
           style="margin: 0 auto"
           :isMobile="true"
@@ -18,60 +14,33 @@
     <div class="text-h2 mx-4 text-left">{{ sectionTitle }}</div>
 
     <div class="flex flex-col justify-center space-y-20 mt-20">
-
       <!-- Magnetar -->
-      <div
-        class="flex flex-col items-center"
-        @click="showMagnetarCard"
-      >
-        <img
-          src="/magnetar-logo-white.svg"
-          alt=""
-        />
-        <img
-          class="mt-6"
-          src="/magnetar-name.svg"
-          alt=""
-        />
+      <div class="flex flex-col items-center" @click="showMagnetarCard">
+        <img src="/magnetar-logo-white.svg" alt="" />
+        <img class="mt-6" src="/magnetar-name.svg" alt="" />
         <div class="text-h4 mx-4 mt-8 text-center">{{ magnetarDescription }}</div>
       </div>
 
       <!-- Blitzar -->
-      <div
-        class="flex flex-col items-center"
-        @click="showBlitzarCard"
-      >
-        <img
-          src="/blitzar-logo-white.svg"
-          alt=""
-        />
-        <img
-          class="mt-6"
-          src="/blitzar-name.svg"
-          alt=""
-        />
+      <div class="flex flex-col items-center" @click="showBlitzarCard">
+        <img src="/blitzar-logo-white.svg" alt="" />
+        <img class="mt-6" src="/blitzar-name.svg" alt="" />
         <div class="text-h4 mx-4 mt-8 text-center">{{ blitzarDescription }}</div>
       </div>
 
       <!-- Planetar -->
-      <div
-        class="flex flex-col items-center"
-        @click="showPepiconsCard"
-      >
-        <img
-          src="/planetar-logo-white.svg"
-          alt=""
-        />
-        <img
-          class="mt-6"
-          src="/planetar-name.svg"
-          alt=""
-        />
+      <div class="flex flex-col items-center" @click="showPepiconsCard">
+        <img src="/planetar-logo-white.svg" alt="" />
+        <img class="mt-6" src="/planetar-name.svg" alt="" />
         <div class="text-h4 mx-4 mt-8 text-center">{{ planetarDescription }}</div>
       </div>
     </div>
   </div>
 </template>
+
+<style lang="sass" scoped>
+</style>
+
 <script>
 import CyModal from './CyModal'
 import FrameworkCard from './FrameworkCard'
@@ -145,5 +114,3 @@ export default {
   },
 }
 </script>
-<style lang="sass" scoped>
-</style>

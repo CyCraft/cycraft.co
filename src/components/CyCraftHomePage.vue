@@ -145,6 +145,43 @@
   </div>
 </template>
 
+<style lang="sass">
+@import './src/assets/typography.sass'
+
+.fade-enter-active, .fade-leave-active
+  transition: opacity .5s ease
+
+.fade-enter, .fade-leave-to
+  opacity: 0
+
+.landing-page-title
+  +header-globals()
+  font-style: normal
+  font-weight: 500
+  font-size: 40px
+  line-height: 49px
+  @media (max-width: 640px)
+    font-weight: 800
+    font-size: 48px
+    line-height: 58px
+    letter-spacing: 0.025em
+    text-transform: uppercase
+.landing-page-subtitle
+  +header-globals()
+  font-style: normal
+  font-weight: 500
+  font-size: 20px
+  line-height: 28px
+.line
+  background: white
+  height: 1px
+.contact-us-underline
+  background: white
+  height: 8px
+  width: 5%
+  margin-top: 24px
+</style>
+
 <script>
 import CyToggle from './CyToggle.vue'
 import Monster from './Monster.vue'
@@ -258,40 +295,3 @@ export default {
   },
 }
 </script>
-
-<style lang="sass">
-@import './src/assets/typography.sass'
-
-.fade-enter-active, .fade-leave-active
-  transition: opacity .5s ease
-
-.fade-enter, .fade-leave-to
-  opacity: 0
-
-.landing-page-title
-  +header-globals()
-  font-style: normal
-  font-weight: 500
-  font-size: 40px
-  line-height: 49px
-  @media (max-width: 640px)
-    font-weight: 800
-    font-size: 48px
-    line-height: 58px
-    letter-spacing: 0.025em
-    text-transform: uppercase
-.landing-page-subtitle
-  +header-globals()
-  font-style: normal
-  font-weight: 500
-  font-size: 20px
-  line-height: 28px
-.line
-  background: white
-  height: 1px
-.contact-us-underline
-  background: white
-  height: 8px
-  width: 5%
-  margin-top: 24px
-</style>

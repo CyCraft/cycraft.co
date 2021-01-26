@@ -1,18 +1,16 @@
 <template>
   <div class="h-full flex flex-col justify-center items-center bg-black">
-    <div
-      id="loading-animation"
-      class="w-auto bg-black"
-    >
-      <img
-        src="cycraft-loading-min.gif"
-        alt="loading animation"
-      >
+    <div id="loading-animation" class="w-auto bg-black">
+      <img src="cycraft-loading-min.gif" alt="loading animation" />
     </div>
   </div>
 </template>
+
+<style lang="sass" scoped>
+</style>
+
 <script>
-import lottie from 'lottie-web'
+// import lottie from 'lottie-web'
 export default {
   name: 'LoadingAnimation',
   //Commented out until we recieve working Lottie animation .json file

@@ -3,11 +3,7 @@
     <transition name="fade">
       <LoadingAnimation v-if="loading" />
 
-      <div
-        v-else
-        id="app"
-        class="bg-black flex justify-center"
-      >
+      <div v-else id="app" class="bg-black flex justify-center">
         <!-- Left glitches descending order -->
         <img
           src="/SideGlitchAlt3.png"
@@ -56,68 +52,6 @@
   </div>
 </template>
 
-<script>
-/*!
- * Run a callback function after scrolling has stopped
- * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
- * @param  {Function} callback The function to run after scrolling
- */
-var scrollStop = function (callback) {
-  // Make sure a valid callback was provided
-  if (!callback || typeof callback !== 'function') return
-
-  // Setup scrolling variable
-  var isScrolling
-
-  // Listen for scroll events
-  window.addEventListener(
-    'scroll',
-    function (event) {
-      // Clear our timeout throughout the scroll
-      window.clearTimeout(isScrolling)
-
-      // Set a timeout to run after scrolling ends
-      isScrolling = setTimeout(function () {
-        // Run the callback
-        callback()
-      }, 0)
-    },
-    false,
-  )
-}
-import CyCraftHomePage from './components/CyCraftHomePage.vue'
-import LoadingAnimation from './components/LoadingAnimation.vue'
-
-export default {
-  name: 'App',
-  components: {
-    CyCraftHomePage,
-    LoadingAnimation,
-  },
-  data() {
-    return {
-      scrolling: false,
-      loading: false,
-    }
-  },
-  computed: {},
-  mounted() {
-    window.onscroll = this.handleScroll
-    scrollStop(this.handleScrollingStopped)
-    setTimeout(() => {
-      this.loading = false
-    }, 5000)
-  },
-  methods: {
-    handleScroll() {
-      this.scrolling = true
-    },
-    handleScrollingStopped() {
-      this.scrolling = false
-    },
-  },
-}
-</script>
 <style lang="sass">
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;800&display=swap')
 @import './assets/styles.css'
@@ -299,3 +233,66 @@ body
   right: 0
   top: 3700px
 </style>
+
+<script>
+/*!
+ * Run a callback function after scrolling has stopped
+ * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
+ * @param  {Function} callback The function to run after scrolling
+ */
+var scrollStop = function (callback) {
+  // Make sure a valid callback was provided
+  if (!callback || typeof callback !== 'function') return
+
+  // Setup scrolling variable
+  var isScrolling
+
+  // Listen for scroll events
+  window.addEventListener(
+    'scroll',
+    function (event) {
+      // Clear our timeout throughout the scroll
+      window.clearTimeout(isScrolling)
+
+      // Set a timeout to run after scrolling ends
+      isScrolling = setTimeout(function () {
+        // Run the callback
+        callback()
+      }, 0)
+    },
+    false,
+  )
+}
+import CyCraftHomePage from './components/CyCraftHomePage.vue'
+import LoadingAnimation from './components/LoadingAnimation.vue'
+
+export default {
+  name: 'App',
+  components: {
+    CyCraftHomePage,
+    LoadingAnimation,
+  },
+  data() {
+    return {
+      scrolling: false,
+      loading: false,
+    }
+  },
+  computed: {},
+  mounted() {
+    window.onscroll = this.handleScroll
+    scrollStop(this.handleScrollingStopped)
+    setTimeout(() => {
+      this.loading = false
+    }, 5000)
+  },
+  methods: {
+    handleScroll() {
+      this.scrolling = true
+    },
+    handleScrollingStopped() {
+      this.scrolling = false
+    },
+  },
+}
+</script>

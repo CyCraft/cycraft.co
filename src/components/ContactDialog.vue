@@ -22,25 +22,24 @@
     <div class="mt-3 text-center sm:mt-5">
       <div class="mt-6">
         <a
-          href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=luca@cycraft.co&su=&cc&bcc&body&tf=1"
+          :href="`https://mail.google.com/mail/u/0/?view=cm&fs=1&to=${email}&su=&cc&bcc&body&tf=1`"
           target="_blank"
         >
           <CyButton @click="close">Gmail (Browser)</CyButton>
         </a>
       </div>
       <div class="mt-2">
-        <a href="mailto:luca@cycraft.co">
+        <a :href="`mailto:${email}`">
           <CyButton @click="close">Email (Default)</CyButton>
         </a>
       </div>
       <div class="mt-2 grid grid-cols-3 gap-2">
-        <CyButton class="col-span-1" @click="copy">Copy</CyButton>
+        <CyButton class="col-span-1" @click="onClickCopy">Copy</CyButton>
         <span class="col-span-2 bg-gray-100 flex flex-row justify-center">
           <input
-            id="copy-email"
             class="h-full w-full text-center bg-gray-100 px-1 text-medium focus:outline-none text-gray-500"
             type="text"
-            value="luca@cycraft.co"
+            :value="email"
             readonly
           />
         </span>
@@ -55,6 +54,7 @@
 
 <script>
 import CyButton from './CyButton'
+import copy from 'copy-text-to-clipboard'
 
 export default {
   name: 'ContactDialog',
@@ -64,15 +64,12 @@ export default {
   data() {
     return {
       copied: false,
+      email: 'luca@cycraft.co',
     }
   },
   methods: {
-    copy() {
-      let copyText = document.getElementById('copy-email')
-      copyText.select()
-      copyText.setSelectionRange(0, 99999)
-      document.execCommand('copy')
-      this.copied = true
+    onClickCopy() {
+      this.copied = copy(this.email)
     },
   },
 }

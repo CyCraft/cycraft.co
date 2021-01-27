@@ -1,9 +1,9 @@
 <template>
   <div id="app" class="h-full w-full">
     <transition name="fade-loading-animation">
-      <LoadingAnimation v-if="loading" @click="loading = false" class="_loading-wall" />
+      <LoadingAnimation v-if="loading" class="_loading-wall" @click="loading = false" />
     </transition>
-    <div :class="`_app ${loading ? '_loading' : ''} flex justify-center`">
+    <div :class="`${loading ? '_loading' : ''} flex justify-center`">
       <!-- Left glitches descending order -->
       <img
         src="/glitches/SideGlitchAlt3.png"
@@ -57,19 +57,19 @@
 @import './css/app.sass'
 @import './css/blink.sass'
 
-._app
-  background: black
-  &._loading
+#app
+  ._loading
     position: fixed
     width: 100vw
     height: 100vh
     overflow: hidden
-._loading-wall
-  height: 100vh
-  width: 100vw
-  position: fixed
-  touch-action: none
-  z-index: 2
+
+  ._loading-wall
+    height: 100vh
+    width: 100vw
+    position: fixed
+    touch-action: none
+    z-index: 2
 
 .fade-loading-animation-enter-active, .fade-loading-animation-leave-active
   transition: opacity 300ms
@@ -77,9 +77,10 @@
 .fade-loading-animation-enter, .fade-loading-animation-leave-to
   opacity: 0
 
+html, body, #app
+  background: black
 body
   height: 100vh
-  background-color: black
   overscroll-behavior-y: none
   overscroll-behavior-x: none
 

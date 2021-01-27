@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-black flex justify-center h-auto">
+  <div class="flex justify-center h-auto">
     <transition name="fade-dialog">
       <CyModal v-if="showingContactDialog" :active="showingContactDialog" @close="closeContact">
         <ContactDialog />

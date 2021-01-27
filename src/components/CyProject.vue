@@ -25,7 +25,7 @@
             <img
               class="inline-block ml-3"
               style="height: 37px"
-              src="/external-link.svg"
+              src="/icons/external-link.svg"
               alt=""
               :draggable="false"
             />
@@ -58,7 +58,7 @@
             <img
               class="inline-block ml-3"
               style="height: 12px"
-              src="/external-link.svg"
+              src="/icons/external-link.svg"
               alt=""
               :draggable="false"
             />

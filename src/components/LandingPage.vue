@@ -18,7 +18,7 @@
         <div class="hidden sm:flex sm:items-end pt-24 sm:pl-12 sm:pr-4 md:pr-10 lg:pr-20">
           <!-- CyCraft Logo -->
           <div class="object-contain sm:max-w-xs md:max-w-none">
-            <img src="/cy-craft-logo.svg" alt="" />
+            <img src="/cycraft/cy-craft-logo.svg" alt="" />
           </div>
         </div>
         <!-- Title Text & Button-->
@@ -102,7 +102,7 @@
           <div class="" style="max-width: 403px">
             <div class="flex pb-4">
               <div class="text-h2">{{ txt.howWeDesign }}</div>
-              <img class="w-5 ml-2 sm:w-10 sm:ml-6" src="/cy-icon-white.svg" alt="" />
+              <img class="w-5 ml-2 sm:w-10 sm:ml-6" src="/cycraft/cy-icon-white.svg" alt="" />
             </div>
             <div class="text-h4">
               {{ txt.howWeDesignSubtext }}
@@ -114,7 +114,7 @@
                 <div class="text-h2">
                   <CyTextGlitch :glitchAtRandom="true">{{ txt.howWeCode }}</CyTextGlitch>
                 </div>
-                <img class="w-5 ml-2 sm:w-10 sm:ml-6" src="/cy-icon-white.svg" alt="" />
+                <img class="w-5 ml-2 sm:w-10 sm:ml-6" src="/cycraft/cy-icon-white.svg" alt="" />
               </div>
               <div class="text-h4 text-right sm:text-left">
                 {{ txt.howWeCodeSubtext }}
@@ -145,7 +145,7 @@
       <!-- Contact Us logo -->
       <div class="mx-10 mt-48 sm:mt-72 pb-8 flex flex-col items-center">
         <a style="cursor: pointer" @click="contactUs">
-          <img src="/contact-us@2x.png" alt="Contact Us Button" />
+          <img src="/cycraft/contact-us@2x.png" alt="Contact Us Button" />
         </a>
         <div
           v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }"

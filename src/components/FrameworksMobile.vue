@@ -21,8 +21,13 @@
       <!-- Magnetar -->
       <div class="flex flex-col items-center">
         <div class="flex flex-col items-center cursor-pointer" @click="showCardFor('magnetar')">
-          <img src="/magnetar-logo-white.svg" alt="logo" :draggable="false" />
-          <img class="mt-6" src="/magnetar-name.svg" alt="magnetar name" :draggable="false" />
+          <img src="/frameworks/magnetar-logo-white.svg" alt="logo" :draggable="false" />
+          <img
+            class="mt-6"
+            src="/frameworks/magnetar-name.svg"
+            alt="magnetar name"
+            :draggable="false"
+          />
         </div>
         <div class="text-h4 mx-6 mt-8 text-center text-wrap-all">
           {{ descriptionMagnetarShort }}
@@ -32,8 +37,13 @@
       <!-- Blitzar -->
       <div class="flex flex-col items-center">
         <div class="flex flex-col items-center cursor-pointer" @click="showCardFor('blitzar')">
-          <img src="/blitzar-logo-white.svg" alt="logo" :draggable="false" />
-          <img class="mt-6" src="/blitzar-name.svg" alt="blitzar name" :draggable="false" />
+          <img src="/frameworks/blitzar-logo-white.svg" alt="logo" :draggable="false" />
+          <img
+            class="mt-6"
+            src="/frameworks/blitzar-name.svg"
+            alt="blitzar name"
+            :draggable="false"
+          />
         </div>
         <div class="text-h4 mx-6 mt-8 text-center text-wrap-all">{{ descriptionBlitzarShort }}</div>
       </div>
@@ -41,8 +51,13 @@
       <!-- Planetar -->
       <div class="flex flex-col items-center">
         <div class="flex flex-col items-center cursor-pointer" @click="showCardFor('planetar')">
-          <img src="/planetar-logo-white.svg" alt="logo" :draggable="false" />
-          <img class="mt-6" src="/planetar-name.svg" alt="planetar name" :draggable="false" />
+          <img src="/frameworks/planetar-logo-white.svg" alt="logo" :draggable="false" />
+          <img
+            class="mt-6"
+            src="/frameworks/planetar-name.svg"
+            alt="planetar name"
+            :draggable="false"
+          />
         </div>
         <div class="text-h4 mx-6 mt-8 text-center text-wrap-all">
           {{ descriptionPlanetarShort }}

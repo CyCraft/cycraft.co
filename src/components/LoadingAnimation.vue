@@ -4,7 +4,7 @@
     @click="$emit('click')"
   >
     <div id="loading-animation" class="w-auto bg-black">
-      <img src="/cycraft-loading-min.gif" alt="loading animation" :draggable="false" />
+      <img src="/cycraft/cycraft-loading-min.gif" alt="loading animation" :draggable="false" />
     </div>
   </div>
 </template>

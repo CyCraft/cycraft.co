@@ -24,11 +24,11 @@
                 :href="`https://github.com/${github}`"
                 class="flex items-center mr-5"
               >
-                <img class="h-4 sm:h-8" src="/Github_Mark.svg" />
+                <img class="h-4 sm:h-8" src="/icons/github.svg" />
                 <p class="text-h4 ml-3">Github</p>
               </a>
               <a v-if="twitter" :href="`https://twitter.com/${twitter}`" class="flex items-center">
-                <img class="h-6 sm:h-12" src="/Twitter_Logo.svg" alt="Twitter Logo" />
+                <img class="h-6 sm:h-12" src="/icons/twitter.svg" alt="Twitter Logo" />
                 <p class="text-h4 ml-1">Twitter</p>
               </a>
             </div>
@@ -62,7 +62,7 @@
                   :href="`https://github.com/${github}`"
                   class="flex items-center mr-5"
                 >
-                  <img class="h-4 sm:h-8" src="/Github_Mark.svg" />
+                  <img class="h-4 sm:h-8" src="/icons/github.svg" />
                   <p class="text-h4 ml-3">Github</p>
                 </a>
                 <a
@@ -70,7 +70,7 @@
                   :href="`https://twitter.com/${twitter}`"
                   class="flex items-center"
                 >
-                  <img class="h-6 sm:h-12" src="/Twitter_Logo.svg" alt="Twitter Logo" />
+                  <img class="h-6 sm:h-12" src="/icons/twitter.svg" alt="Twitter Logo" />
                   <p class="text-h4 ml-1">Twitter</p>
                 </a>
               </div>

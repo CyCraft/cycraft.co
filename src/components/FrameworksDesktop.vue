@@ -7,8 +7,8 @@
           class="flex flex-col items-center cursor-pointer place-self-start"
           @click="setMagnetar"
         >
-          <img src="/magnetar-logo-white.svg" alt="magnetar-logo" :draggable="false" />
-          <img class="mt-6" src="/magnetar-name.svg" alt="magnetar" :draggable="false" />
+          <img src="/frameworks/magnetar-logo-white.svg" alt="magnetar-logo" :draggable="false" />
+          <img class="mt-6" src="/frameworks/magnetar-name.svg" alt="magnetar" :draggable="false" />
         </div>
 
         <!-- Blitzar -->
@@ -16,14 +16,14 @@
           class="flex flex-col items-center cursor-pointer place-self-center"
           @click="setBlitzar"
         >
-          <img src="/blitzar-logo-white.svg" alt="blitzar-logo" :draggable="false" />
-          <img class="mt-6" src="/blitzar-name.svg" alt="blitzar" :draggable="false" />
+          <img src="/frameworks/blitzar-logo-white.svg" alt="blitzar-logo" :draggable="false" />
+          <img class="mt-6" src="/frameworks/blitzar-name.svg" alt="blitzar" :draggable="false" />
         </div>
 
         <!-- Planetar -->
         <div class="flex flex-col items-center cursor-pointer place-self-end" @click="setPlanetar">
-          <img src="/planetar-logo-white.svg" alt="planetar-logo" :draggable="false" />
-          <img class="mt-6" src="/planetar-name.svg" alt="planetar" :draggable="false" />
+          <img src="/frameworks/planetar-logo-white.svg" alt="planetar-logo" :draggable="false" />
+          <img class="mt-6" src="/frameworks/planetar-name.svg" alt="planetar" :draggable="false" />
         </div>
       </div>
     </div>

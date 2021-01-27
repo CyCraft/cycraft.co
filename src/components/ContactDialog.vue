@@ -17,7 +17,7 @@
         />
       </svg>
 
-      <img v-else class="h-10 w-10" src="/cy-icon-white.svg" alt="" />
+      <img v-else class="h-10 w-10" src="/cycraft/cy-icon-white.svg" alt="" />
     </div>
     <div class="mt-3 text-center sm:mt-5">
       <div class="mt-6">

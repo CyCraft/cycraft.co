@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vue-cli-service serve",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "rimraf ./dist && rimraf ./.presite && vue-cli-service build && presite ./dist && rimraf ./dist",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -31,7 +31,9 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.5.0",
     "postcss": "^7.0.35",
+    "presite": "^2.1.1",
     "prettier": "^2.2.1",
+    "rimraf": "^2.7.1",
     "sass": "^1.32.5",
     "sass-loader": "^10.1.1",
     "stylelint": "^13.9.0",

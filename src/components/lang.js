@@ -13,7 +13,7 @@ export const lang = {
   },
   descriptionPepicons: {
     ja:
-      'Pepiconsは、総数118個の完全オリジナルアイコンパッケージです。このアイコンセットには、POP!バージョン とPrintバージョンの2種類のバリエーションがあり、どちらもレトロな雰囲気を基調としたアイコンセットになっています。ウェブサイトのライブプレビューでは、このパックが提供するすべてのアイコンを試用すことができます。',
+      'Pepiconsは、総数118個の完全オリジナルアイコンパッケージです。このアイコンセットには、POP!バージョン とPrintバージョンの2種類のバリエーションがあり、どちらもレトロな雰囲気を基調としたアイコンセットになっています。ウェブサイトのライブプレビューでは、このパックが提供するすべてのアイコンを試用することができます。',
     en:
       'Pepicons is a grand total of 118 hand-crafted icons — and counting! This completely original icon set is made in two retro variants: Pop! and Print. A live preview on the website allows you to play around with all the variations the icon pack has to offer.',
   },

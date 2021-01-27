@@ -25,12 +25,12 @@
           :href="`https://mail.google.com/mail/u/0/?view=cm&fs=1&to=${email}&su=&cc&bcc&body&tf=1`"
           target="_blank"
         >
-          <CyButton @click="close">Gmail (Browser)</CyButton>
+          <CyButton>Gmail (Browser)</CyButton>
         </a>
       </div>
       <div class="mt-2">
         <a :href="`mailto:${email}`">
-          <CyButton @click="close">Email (Default)</CyButton>
+          <CyButton>Email (Default)</CyButton>
         </a>
       </div>
       <div class="mt-2 grid grid-cols-3 gap-2">

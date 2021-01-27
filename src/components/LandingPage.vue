@@ -45,14 +45,14 @@
         <div class="grid gap-10 md:gap-20 grid-cols-1">
           <CyProject
             title="Pepicons"
-            img="/pepicons.png"
+            img="/projects/pepicons.svg"
             url="https://pepicons.com/"
             linkText="pepicons.com"
             :description="txt.descriptionPepicons"
           />
           <CyProject
             title="CineMatch"
-            img="/cinematch.png"
+            img="/projects/cinematch.png"
             url="https://cine-match.com"
             linkText="cine-match.com"
             :description="txt.descriptionCM"
@@ -62,14 +62,14 @@
         <div class="grid gap-10 md:gap-20 grid-cols-1">
           <CyProject
             title="UBI Calculator"
-            img="/ubi.png"
+            img="/projects/ubicalculator.png"
             url="http://ubicalculator.com"
             linkText="ubicalculator.com"
             :description="txt.descriptionUBI"
           />
           <CyProject
             title="Peer Learning"
-            img="/peer-learning.png"
+            img="/projects/peerlearning.png"
             url="https://peerlearning.net/"
             linkText="peerlearning.net"
             :description="txt.descriptionPL"
@@ -170,7 +170,7 @@
 </template>
 
 <style lang="sass">
-@import './src/assets/typography.sass'
+@import '../css/typography.sass'
 
 .fade-dialog-enter-active, .fade-dialog-leave-active
   transition: opacity .2s ease

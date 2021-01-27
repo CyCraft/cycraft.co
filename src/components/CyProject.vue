@@ -8,7 +8,13 @@
     <!-- desktop overlay -->
     <a :href="url" target="_blank" class="hidden sm:block">
       <div class="relative mx-auto">
-        <img class="h-full w-full" :src="img" alt="Project Photo" />
+        <img
+          class="w-full"
+          style="height: 618px; object-fit: cover"
+          :src="img"
+          alt="Project Photo"
+          :draggable="false"
+        />
         <div
           class="_card-wrapper absolute flex flex-col justify-center items-center top-0 h-full w-full bg-black"
         >
@@ -16,7 +22,13 @@
             <div class="text-h1 inline-block">
               {{ linkText }}
             </div>
-            <img class="inline-block ml-3" style="height: 37px" src="/external-link.svg" alt="" />
+            <img
+              class="inline-block ml-3"
+              style="height: 37px"
+              src="/external-link.svg"
+              alt=""
+              :draggable="false"
+            />
           </div>
         </div>
       </div>
@@ -25,7 +37,13 @@
 
     <!-- mobile overlay -->
     <div class="relative mx-auto block sm:hidden">
-      <img class="h-full w-full" :src="img" alt="Project Photo" />
+      <img
+        class="w-full"
+        style="height: 314px; object-fit: cover"
+        :src="img"
+        alt="Project Photo"
+        :draggable="false"
+      />
       <div
         :class="`_card-wrapper ${
           clickedCard ? '_shown' : ''
@@ -37,7 +55,13 @@
             <div class="text-h3 inline-block">
               {{ linkText }}
             </div>
-            <img class="inline-block ml-3" style="height: 12px" src="/external-link.svg" alt="" />
+            <img
+              class="inline-block ml-3"
+              style="height: 12px"
+              src="/external-link.svg"
+              alt=""
+              :draggable="false"
+            />
           </div>
         </a>
       </div>

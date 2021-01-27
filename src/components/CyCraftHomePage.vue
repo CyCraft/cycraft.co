@@ -54,21 +54,24 @@
             title="CineMatch"
             img="/cinematch.png"
             url="https://cine-match.com"
-            linkText="cinematch.com"
+            linkText="cine-match.com"
             :description="txt.descriptionCM"
           />
+        </div>
+        <div class="pl-6 sm:pl-0 text-h2 mb-6 mt-20">{{ txt.chapterTeamEfforts }}</div>
+        <div class="grid gap-10 md:gap-20 grid-cols-1">
           <CyProject
             title="UBI Calculator"
             img="/ubi.png"
             url="http://ubicalculator.com"
-            linkText="ubi-calculator.com"
+            linkText="ubicalculator.com"
             :description="txt.descriptionUBI"
           />
           <CyProject
             title="Peer Learning"
             img="/peer-learning.png"
             url="https://peerlearning.net/"
-            linkText="peer-learning.com"
+            linkText="peerlearning.net"
             :description="txt.descriptionPL"
           />
         </div>
@@ -243,22 +246,27 @@ export default {
 
   props: { scrolling: Boolean },
 
-  data: () => ({
-    show: false,
-    showingContactDialog: false,
-    japanese: false,
-    underlineIsAnimating: false,
-    underlineIsExpanded: false,
-    intersectionOptions: {
-      root: null,
-      rootMargin: '0px 0px 0px 0px',
-      threshold: [0, 1],
-    }, // https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
-  }),
+  data() {
+    const _lang = navigator.language
+    const selectedLang = _lang.startsWith('ja') ? 'ja' : 'en'
+    return {
+      show: false,
+      showingContactDialog: false,
+      selectedLang,
+      underlineIsAnimating: false,
+      underlineIsExpanded: false,
+      // https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+      intersectionOptions: {
+        root: null,
+        rootMargin: '0px 0px 0px 0px',
+        threshold: [0, 1],
+      },
+    }
+  },
 
   computed: {
     txt() {
-      const selectedLang = this.japanese ? 'ja' : 'en'
+      const { selectedLang } = this
 
       const formattedLang = Object.entries(lang).reduce((result, [key, value]) => {
         result[key] = value[selectedLang]
@@ -275,8 +283,8 @@ export default {
     closeContact() {
       this.showingContactDialog = false
     },
-    toggled(value) {
-      this.japanese = value
+    toggled(isChecked) {
+      this.selectedLang = isChecked ? 'ja' : 'en'
       window.scroll({
         top: 0,
         left: 0,

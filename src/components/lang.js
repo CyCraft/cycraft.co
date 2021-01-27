@@ -1,6 +1,6 @@
 export const lang = {
   pageSubTitle: {
-    japanese: '洗練されたアプリの創造で、より良いウェブの世界を目指す。',
+    ja: '洗練されたアプリの創造で、より良いウェブの世界を目指す。',
     en: 'We craft beautiful apps and strive for a better web.',
   },
   contactBtn: {
@@ -8,20 +8,24 @@ export const lang = {
     en: 'Contact Us',
   },
   chapterProjects: {
-    ja: 'Our Projects',
+    ja: '自社プロジェクト',
     en: 'Our Projects',
   },
   descriptionPepicons: {
     ja:
-      'Pepiconsは、総数118個の完全オリジナルアイコンパッケージです。 このアイコンセットには、POP!バージョン とPrintバージョンの2種類のバリエーションがあり、どちらもレトロな雰囲気を基調としたアイコンセットになっています。 ウェブサイトのライブプレビューでは、このパックが提供するすべてのアイコンを試用すことができます。',
+      'Pepiconsは、総数118個の完全オリジナルアイコンパッケージです。このアイコンセットには、POP!バージョン とPrintバージョンの2種類のバリエーションがあり、どちらもレトロな雰囲気を基調としたアイコンセットになっています。ウェブサイトのライブプレビューでは、このパックが提供するすべてのアイコンを試用すことができます。',
     en:
       'Pepicons is a grand total of 118 hand-crafted icons — and counting! This completely original icon set is made in two retro variants: Pop! and Print. A live preview on the website allows you to play around with all the variations the icon pack has to offer.',
   },
   descriptionCM: {
     ja:
-      'CineMatchでは、映画のウォッチリストを作成して友達と共有することができます。 このアプリのユーザーインターフェースは、美しく見やすさを追求したものになっています。',
+      'CineMatchでは、映画のウォッチリストを作成して友達と共有することができます。このアプリのユーザーインターフェースは、美しく見やすさを追求したものになっています。',
     en:
       'With the help of CineMatch a user can create film watchlists and share them with friends. This neat app has a clean user interface that organizes the user’s lists beautifully and with simplicity.',
+  },
+  chapterTeamEfforts: {
+    ja: '協力プロジェクト',
+    en: 'Team Efforts',
   },
   descriptionUBI: {
     ja:
@@ -31,9 +35,44 @@ export const lang = {
   },
   descriptionPL: {
     ja:
-      'PeerLearningは、学生達が協力して互いに学び合うためのオンライン教育ソフトです。 教育分野の助成金によって資金提供を受けているこのソフトには、（ここから微妙→）現在のユーザーテストの利点があります。',
+      'PeerLearningは、学生達が協力して互いに学び合うためのオンライン教育ソフトです。教育分野の助成金によって資金提供を受けているこのソフトは、現在米国の学校で使用されています。',
     en:
-      'PeerLearning is an online education software bringing students together to collaborate and learn from one another. Funded by education-focused grants, this software has the benefit of current user testing.',
+      'PeerLearning is an online education software bringing students together to collaborate and learn from one another. Funded by education-focused grants, currently used in schools in the United States.',
+  },
+  chapterFrameworks: {
+    ja: '自社フレームワーク',
+    en: 'Frameworks',
+  },
+  descriptionPlanetar: {
+    ja:
+      'この軽快なVueフレームワークは、リアルタイムに反映されるスタイルガイドを自動生成します。開発者とデザイナーの相互の創造と開発をより強力にするコンポーネントエクスプローラーが利用できます。',
+    en:
+      'This nimble Vue framework creates an auto-generated, living style guide. The style guide comes complete with an interactive component explorer that both developers and designers will love.',
+  },
+  descriptionMagnetar: {
+    ja:
+      'アプリのデータ、柔軟にアクセス可能に。\n\nこのフレームワークに依存しない同期ソリューションは、任意のデータベースまたはAPIに連携し、データが簡単に取得可能になるうえ、ローカルで整理・編集すると自動的にサーバーへ同期されます。さらに、サーバー同期前にUIが先に更新されるオプティミスティックUI機能が組み込まれています。',
+    en:
+      'Your data, where you want.\n\nThis framework-agnostic syncing solution can automatically connect to any DB or API and keep your data organised for you in a local data store. Plus, it’s got optimistic-UI built right in.',
+  },
+  descriptionBlitzar: {
+    ja: 'Blitzarは、VueJSで高速プロトタイピングを可能にする柔軟なコンポーネントコレクションです。',
+    en:
+      'Blitzar is a flexible component collection allowing for blitzing fast prototyping with VueJS.',
+  },
+  descriptionPlanetarShort: {
+    ja:
+      'Planetarは、リアルタイムに反映されるスタイルガイドを自動生成する軽快なVueフレームワークです。',
+    en: 'This nimble Vue framework creates an auto-generated, living style guide.',
+  },
+  descriptionMagnetarShort: {
+    ja:
+      'Magnetarは、フレームワークに依存しない同期ソリューションであり、任意のデータベースまたはAPIに連携し、データが簡単に取得・整理・編集可能になります。',
+    en: 'Magnetar is a framework-agnostic syncing solution that keeps your data where you need it.',
+  },
+  descriptionBlitzarShort: {
+    ja: 'Blitzarは、VueJSで高速プロトタイピングを可能にする柔軟なコンポーネントコレクションです。',
+    en: 'A flexible component collection allowing for blitzing fast prototyping with VueJS.',
   },
   howWeDesign: {
     ja: 'How we design',
@@ -48,7 +87,7 @@ export const lang = {
     en: 'How we code',
   },
   howWeCodeSubtext: {
-    japanese: 'シンプルでモダン、そして適応性の高いコードでデザインの美しさを表現します。',
+    ja: 'シンプルでモダン、そして適応性の高いコードでデザインの美しさを表現します。',
     en: 'Matching the beauty of the design, our code is modern, concise, and adaptive.',
   },
   chapterAboutUs: {
@@ -60,7 +99,8 @@ export const lang = {
     en: 'Luca Ban',
   },
   bioLuca: {
-    ja: 'japanese',
+    ja:
+      '誕生以来、テクノロジー愛好家です。コードを書くことと詩を書くことは同じことだと思っています。不可能なことは存在しない — 才能は自分に教えるスキルと信じています。',
     en:
       'Has been a technology enthusiast since birth. He thinks of writing code as nothing less than poetry. Believes everything is possible — talent is a skill you teach yourself.',
   },
@@ -69,41 +109,9 @@ export const lang = {
     en: 'Tadaki Matsushita',
   },
   bioTadaki: {
-    ja: 'japanese',
+    ja:
+      '自動化大好きな独学のプログラマー。日本中の企業ビジョンをプログラミングで支援してきました。Webマーケティングも得意としています。',
     en:
       'Self taught coder. He has helped companies all over Japan turn their vision into code. Excels at web marketing; and currently loves automation.',
-  },
-  chapterFrameworks: {
-    ja: 'Frameworks',
-    en: 'Frameworks',
-  },
-  descriptionPlanetar: {
-    ja:
-      'この軽快なVueフレームワークは、リアルタイムに反映されるスタイルガイドを自動生成します。 開発者とデザイナーの相互の創造と開発をより強力にするコンポーネントエクスプローラーが利用できます。',
-    en:
-      'This nimble Vue framework creates an auto-generated, living style guide. The styleguide comes complete with an interactive component explorer that both developers and designers will love.',
-  },
-  descriptionMagnetar: {
-    ja:
-      'あなたが望むデータがここに。\n\nこのフレームワークに依存しない同期ソリューションは、任意のDBまたはAPIに自動的に接続し、ローカルでデータを整理・保持しておくことができます。 さらに、直感的でシンプルなUIが組み込まれています。',
-    en:
-      'Your data, where you want.\n\nThis framework-agnostic syncing solution can automatically connect to any DB or API and keep your data organised for you in a local data store. Plus, it’s got optimistic-UI built right in.',
-  },
-  descriptionBlitzar: {
-    ja: 'Blitzarは、VueJSで高速プロトタイピングを可能にする柔軟なコンポーネントコレクションです。',
-    en:
-      'Blitzar is a flexible component collection allowing for blitzing fast prototyping with VueJS.',
-  },
-  descriptionPlanetarShort: {
-    ja: 'japanese',
-    en: 'This nimble Vue framework creates an auto-generated, living style guide.',
-  },
-  descriptionMagnetarShort: {
-    ja: 'japanese',
-    en: 'Magnetar is a framework-agnostic syncing solution that keeps your data where you need it.',
-  },
-  descriptionBlitzarShort: {
-    ja: 'japanese',
-    en: 'A flexible component collection allowing for blitzing fast prototyping with VueJS.',
   },
 }

@@ -45,7 +45,7 @@
         <div class="grid gap-10 md:gap-20 grid-cols-1">
           <CyProject
             title="Pepicons"
-            img="/projects/pepicons.svg"
+            img="/projects/pepicons.png"
             url="https://pepicons.com/"
             linkText="pepicons.com"
             :description="txt.descriptionPepicons"

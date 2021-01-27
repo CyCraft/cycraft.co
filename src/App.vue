@@ -293,7 +293,6 @@ export default {
       timeout: null,
     }
   },
-  computed: {},
   mounted() {
     window.onscroll = this.handleScroll
     scrollStop(this.handleScrollingStopped)

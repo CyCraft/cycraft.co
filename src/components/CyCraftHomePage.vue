@@ -24,7 +24,8 @@
         <!-- Title Text & Button-->
         <div class="flex-col pt-10 px-10 mt-16 sm:mt-32 sm:mr-4">
           <div class="landing-page-title" style="max-width: 300px">
-            We <CyTextGlitch :value="scrolling">craft</CyTextGlitch> without cruft.
+            We <CyTextGlitch :value="scrolling" :glitchAtRandom="true">craft</CyTextGlitch> without
+            cruft.
           </div>
           <div class="landing-page-subtitle pt-6" style="max-width: 370px">
             {{ txt.pageSubTitle }}
@@ -73,7 +74,9 @@
         </div>
       </div>
       <div class="mx-0 sm:mx-10 mt-48 sm:mt-64">
-        <div class="text-h2 pl-6 sm:pl-0 text-left">{{ txt.chapterFrameworks }}</div>
+        <div class="text-h2 pl-6 sm:pl-0 text-left">
+          <CyTextGlitch :glitchAtRandom="true">{{ txt.chapterFrameworks }}</CyTextGlitch>
+        </div>
       </div>
       <FrameworksMobile
         class="sm:hidden mt-20"
@@ -105,7 +108,9 @@
           <div class="mt-16 sm:mt-24 flex justify-end">
             <div style="max-width: 403px">
               <div class="flex pb-4 justify-end sm:justify-start">
-                <div class="text-h2">{{ txt.howWeCode }}</div>
+                <div class="text-h2">
+                  <CyTextGlitch :glitchAtRandom="true">{{ txt.howWeCode }}</CyTextGlitch>
+                </div>
                 <img class="w-5 ml-2 sm:w-10 sm:ml-6" src="/cy-icon-white.svg" alt="" />
               </div>
               <div class="text-h4 text-right sm:text-left">
@@ -153,7 +158,9 @@
       </div>
       <!-- Copyright and Terms -->
       <div class="mx-10 mt-16 sm:mt-32 md:mt-48 pb-16 flex-col justify-end">
-        <p class="text-h3 text-center">&copy; 2020 CyCraft</p>
+        <p class="text-h3 text-center">
+          <CyTextGlitch :glitchAtRandom="true"> &copy; 2020 CyCraft</CyTextGlitch>
+        </p>
       </div>
     </div>
   </div>

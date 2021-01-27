@@ -3,7 +3,9 @@
     <div v-if="imgPosition === 'left'" class="flex-col mt-8 pb-8">
       <div class="w-full md:w-5/6 sm:mt-10">
         <div class="flex items-center mb-4">
-          <span class="text-h3 whitespace-nowrap">{{ name }}</span>
+          <span class="text-h3 whitespace-nowrap"
+            ><CyTextGlitch :glitchAtRandom="true">{{ name }}</CyTextGlitch></span
+          >
           <span class="line ml-4 w-full"></span>
         </div>
         <div class="flex mt-2">
@@ -39,7 +41,9 @@
         <div class="w-full md:w-5/6 sm:mt-10">
           <div class="flex items-center mb-4">
             <span class="line hidden sm:block mr-4 ml-4 w-full"></span>
-            <span class="text-h3 whitespace-nowrap">{{ name }}</span>
+            <span class="text-h3 whitespace-nowrap"
+              ><CyTextGlitch :glitchAtRandom="true">{{ name }}</CyTextGlitch></span
+            >
             <span class="line block sm:hidden ml-4 w-full"></span>
           </div>
           <div class="flex mt-2 sm:flex-row-reverse">
@@ -87,8 +91,11 @@
 </style>
 
 <script>
+import CyTextGlitch from './CyTextGlitch.vue'
+
 export default {
   name: 'AboutUsSection',
+  components: { CyTextGlitch },
   props: {
     name: { type: String, required: true },
     bio: { type: String, required: true },

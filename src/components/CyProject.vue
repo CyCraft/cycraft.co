@@ -10,7 +10,7 @@
       <div class="relative mx-auto">
         <img
           class="w-full"
-          style="height: 618px; object-fit: cover"
+          style="height: 500px; object-fit: cover"
           :src="img"
           alt="Project Photo"
           :draggable="false"

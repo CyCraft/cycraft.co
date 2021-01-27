@@ -5,7 +5,7 @@
         <ContactDialog />
       </CyModal>
     </transition>
-    <div class="flex-col min-width-full justify-center" style="max-width: 1100px">
+    <div class="flex-col min-width-full justify-center" style="max-width: 900px">
       <!-- Mobile Header -->
       <div class="sm:hidden flex content-center justify-between p-3">
         <Monster />

@@ -1,25 +1,47 @@
 {
-  "name": "cycraft.co",
-  "version": "0.0.0",
-  "description": "CyCraft website",
-  "main": "index.js",
+  "name": "cycraft",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "build": "vuepress build docs",
-    "dev": "vuepress dev docs",
-    "deploy": "firebase use cycraft-co && firebase deploy"
+    "dev": "vue-cli-service serve",
+    "deploy": "npm run build && firebase deploy",
+    "serve": "vue-cli-service serve",
+    "build": "rimraf ./dist && rimraf ./.presite && vue-cli-service build && presite ./dist && rimraf ./dist",
+    "lint": "vue-cli-service lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CyCraft/cycraft.co.git"
+  "dependencies": {
+    "@tailwindcss/postcss7-compat": "^2.0.2",
+    "animejs": "^3.2.1",
+    "copy-text-to-clipboard": "^2.2.0",
+    "core-js": "^3.8.3",
+    "lottie-web": "^5.7.6",
+    "roll-anything": "^2.0.0",
+    "smoothscroll-polyfill": "^0.4.4",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "vue": "^2.6.12",
+    "vue-text-glitch": "^1.0.1"
   },
-  "author": "Luca Ban - Mesqueeb",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/CyCraft/cycraft.co/issues"
-  },
-  "homepage": "https://github.com/CyCraft/cycraft.co#readme",
   "devDependencies": {
-    "npm-check-updates": "^9.0.1",
-    "vuepress": "^1.2.0"
+    "@vue/cli-plugin-babel": "~4.5.11",
+    "@vue/cli-plugin-eslint": "~4.5.11",
+    "@vue/cli-service": "~4.5.11",
+    "autoprefixer": "^9.8.6",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.5.0",
+    "postcss": "^7.0.35",
+    "presite": "^2.1.1",
+    "prettier": "^2.2.1",
+    "rimraf": "^2.7.1",
+    "sass": "^1.32.5",
+    "sass-loader": "^10.1.1",
+    "stylelint": "^13.9.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylus-loader": "^4.3.3",
+    "vue-template-compiler": "^2.6.12",
+    "vue-waypoint": "^3.5.2"
   }
 }

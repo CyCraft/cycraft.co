@@ -162,7 +162,9 @@
       <!-- Copyright and Terms -->
       <div class="mx-10 mt-16 sm:mt-32 md:mt-48 pb-16 flex-col justify-end">
         <p class="text-h3 text-center">
-          <CyTextGlitch :glitchAtRandom="true"> &copy; 2020 CyCraft</CyTextGlitch>
+          <CyTextGlitch :glitchAtRandom="true">
+            &copy; {{ new Date().getFullYear() }} CyCraft</CyTextGlitch
+          >
         </p>
       </div>
     </div>

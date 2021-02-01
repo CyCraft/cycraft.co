@@ -217,8 +217,8 @@
   transition: all 1.5s ease
   transition-delay: 0.7s
 
-.fade-framework-line-leave-active
-  transition: all 0.3s ease // also update FADE_OUT_MS
+// .fade-framework-line-leave-active
+//   transition: all 0.3s ease // also update FADE_OUT_MS
 
 .fade-framework-line-enter,
 .fade-framework-line-leave-to
@@ -275,25 +275,25 @@ export default {
     },
     setPlanetar() {
       this.resetAnimation()
-      this.animateLineId = 'planetar-line'
       this.animationTimeout = setTimeout(() => {
         this.planetar = true
+        this.animateLineId = 'planetar-line'
         this.animateLine()
       }, FADE_OUT_MS)
     },
     setMagnetar() {
       this.resetAnimation()
-      this.animateLineId = 'magnetar-line'
       this.animationTimeout = setTimeout(() => {
         this.magnetar = true
+        this.animateLineId = 'magnetar-line'
         this.animateLine()
       }, FADE_OUT_MS)
     },
     setBlitzar() {
       this.resetAnimation()
-      this.animateLineId = 'blitzar-line'
       this.animationTimeout = setTimeout(() => {
         this.blitzar = true
+        this.animateLineId = 'blitzar-line'
         this.animateLine()
       }, FADE_OUT_MS)
     },

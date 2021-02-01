@@ -62,33 +62,39 @@
       style="min-height: 480px"
       class="mt-6"
     >
+
+      <div
+        v-show="magnetar"
+        id="magnetar"
+      >
+        <div class="flex flex-row">
+          <div
+            class="w-1/2 flex flex-row"
+            style="padding-left: 107px"
+          >
+            <svg
+              style="flex: 1"
+              width="433"
+              viewBox="0 0 433 211"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                id="magnetar-line"
+                d="M1.5 0V120H431.5V210.5"
+                stroke="white"
+                stroke-width="2"
+              />
+            </svg>
+
+          </div>
+        </div>
+      </div>
       <transition name="fade-framework-line">
         <div
           v-show="magnetar"
           id="magnetar"
         >
-          <div class="flex flex-row">
-            <div
-              class="w-1/2 flex flex-row"
-              style="padding-left: 107px"
-            >
-              <svg
-                style="flex: 1"
-                width="433"
-                viewBox="0 0 433 211"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  id="magnetar-line"
-                  d="M1.5 0V120H431.5V210.5"
-                  stroke="white"
-                  stroke-width="2"
-                />
-              </svg>
-
-            </div>
-          </div>
           <div class="w-1/2"></div>
 
           <div class="flex flex-row justify-center">
@@ -106,35 +112,39 @@
           </div>
         </div>
       </transition>
+      <div
+        v-show="blitzar"
+        id="blitzar"
+      >
+        <div class="flex flex-row">
+          <div class="w-1/2"></div>
+          <div
+            class="w-1/2 flex flex-row"
+            style="padding-right: 90px"
+          >
+            <svg
+              width="2"
+              height="208"
+              viewBox="0 0 2 208"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                id="blitzar-line"
+                d="M0.5 0.5V415.5"
+                stroke="white"
+                stroke-width="2"
+              />
+            </svg>
 
+          </div>
+        </div>
+      </div>
       <transition name="fade-framework-line">
         <div
           v-show="blitzar"
           id="blitzar"
         >
-          <div class="flex flex-row">
-            <div class="w-1/2"></div>
-            <div
-              class="w-1/2 flex flex-row"
-              style="padding-right: 90px"
-            >
-              <svg
-                width="2"
-                height="208"
-                viewBox="0 0 2 208"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  id="blitzar-line"
-                  d="M0.5 0.5V415.5"
-                  stroke="white"
-                  stroke-width="2"
-                />
-              </svg>
-
-            </div>
-          </div>
           <div class="flex flex-row justify-center">
             <div
               class="flex flex-col justify-center"
@@ -150,34 +160,39 @@
           </div>
         </div>
       </transition>
+      <div
+        v-show="planetar"
+        id="planetar"
+      >
+        <div class="flex flex-row">
+          <div class="w-1/2"></div>
+          <div
+            class="w-1/2 flex flex-row"
+            style="padding-right: 115px"
+          >
+            <svg
+              style="flex: 1"
+              width="450"
+              viewBox="0 0 450 211"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                id="planetar-line"
+                d="M449 0V120H1V212.5"
+                stroke="white"
+                stroke-width="2"
+              />
+            </svg>
+
+          </div>
+        </div>
+      </div>
       <transition name="fade-framework-line">
         <div
           v-show="planetar"
           id="planetar"
         >
-          <div class="flex flex-row">
-            <div class="w-1/2"></div>
-            <div
-              class="w-1/2 flex flex-row"
-              style="padding-right: 115px"
-            >
-              <svg
-                style="flex: 1"
-                width="450"
-                viewBox="0 0 450 211"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  id="planetar-line"
-                  d="M449 0V120H1V212.5"
-                  stroke="white"
-                  stroke-width="2"
-                />
-              </svg>
-
-            </div>
-          </div>
           <div class="flex flex-row justify-center">
             <div
               class="flex flex-col justify-center"
@@ -200,6 +215,7 @@
 <style lang="sass" scoped>
 .fade-framework-line-enter-active
   transition: all 1.5s ease
+  transition-delay: 0.7s
 
 .fade-framework-line-leave-active
   transition: all 0.3s ease // also update FADE_OUT_MS

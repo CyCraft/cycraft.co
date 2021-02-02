@@ -1,8 +1,9 @@
 <template>
   <div>
+    <!-- Framework Logos -->
     <div class="_mbp-logos-wrapper">
       <div class="_mbp-logos-horizontal">
-        <!-- Magnetar -->
+        <!-- Magnetar Logo -->
         <div
           class="flex flex-col items-center cursor-pointer place-self-start"
           @click="setMagnetar"
@@ -20,7 +21,7 @@
           />
         </div>
 
-        <!-- Blitzar -->
+        <!-- Blitzar Logo -->
         <div
           class="flex flex-col items-center cursor-pointer place-self-center"
           @click="setBlitzar"
@@ -38,7 +39,7 @@
           />
         </div>
 
-        <!-- Planetar -->
+        <!-- Planetar Logo -->
         <div
           class="flex flex-col items-center cursor-pointer place-self-end"
           @click="setPlanetar"
@@ -58,11 +59,12 @@
       </div>
     </div>
 
+    <!-- Framework Lines and Cards -->
     <div
       style="min-height: 480px"
       class="mt-6"
     >
-
+      <!-- Magnetar Line -->
       <div
         v-show="magnetar"
         id="magnetar"
@@ -90,7 +92,11 @@
           </div>
         </div>
       </div>
-      <transition name="fade-framework-line">
+      <!-- Magnetar Card -->
+      <transition
+        name="fade-framework-line"
+        mode="out-in"
+      >
         <div
           v-show="magnetar"
           id="magnetar"
@@ -112,6 +118,7 @@
           </div>
         </div>
       </transition>
+      <!-- Blitzar Line -->
       <div
         v-show="blitzar"
         id="blitzar"
@@ -140,7 +147,11 @@
           </div>
         </div>
       </div>
-      <transition name="fade-framework-line">
+      <!-- Blitzar Card -->
+      <transition
+        name="fade-framework-line"
+        mode="out-in"
+      >
         <div
           v-show="blitzar"
           id="blitzar"
@@ -160,6 +171,7 @@
           </div>
         </div>
       </transition>
+      <!-- Planetar Line -->
       <div
         v-show="planetar"
         id="planetar"
@@ -188,7 +200,11 @@
           </div>
         </div>
       </div>
-      <transition name="fade-framework-line">
+      <!-- Planetar Card -->
+      <transition
+        name="fade-framework-line"
+        mode="out-in"
+      >
         <div
           v-show="planetar"
           id="planetar"
@@ -217,8 +233,8 @@
   transition: all 1.5s ease
   transition-delay: 0.7s
 
-// .fade-framework-line-leave-active
-//   transition: all 0.3s ease // also update FADE_OUT_MS
+.fade-framework-line-leave-active
+  transition: all 0.3s ease // also update FADE_OUT_MS
 
 .fade-framework-line-enter,
 .fade-framework-line-leave-to

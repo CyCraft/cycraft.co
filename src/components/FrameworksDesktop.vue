@@ -65,10 +65,7 @@
       class="mt-6"
     >
       <!-- Magnetar Line -->
-      <transition
-        name="fade-framework-line"
-        mode="out-in"
-      >
+      <transition name="fade-framework-line">
         <div
           v-show="magnetar"
           id="magnetar"
@@ -98,10 +95,7 @@
         </div>
       </transition>
       <!-- Magnetar Card -->
-      <transition
-        name="fade-framework-card"
-        mode="out-in"
-      >
+      <transition name="fade-framework-card">
         <div
           v-show="magnetar"
           id="magnetar"
@@ -124,10 +118,7 @@
         </div>
       </transition>
       <!-- Blitzar Line -->
-      <transition
-        name="fade-framework-line"
-        mode="out-in"
-      >
+      <transition name="fade-framework-line">
         <div
           v-show="blitzar"
           id="blitzar"
@@ -157,10 +148,7 @@
         </div>
       </transition>
       <!-- Blitzar Card -->
-      <transition
-        name="fade-framework-card"
-        mode="out-in"
-      >
+      <transition name="fade-framework-card">
         <div
           v-show="blitzar"
           id="blitzar"
@@ -181,10 +169,7 @@
         </div>
       </transition>
       <!-- Planetar Line -->
-      <transition
-        name="fade-framework-line"
-        mode="out-in"
-      >
+      <transition name="fade-framework-line">
         <div
           v-show="planetar"
           id="planetar"
@@ -215,10 +200,7 @@
         </div>
       </transition>
       <!-- Planetar Card -->
-      <transition
-        name="fade-framework-card"
-        mode="out-in"
-      >
+      <transition name="fade-framework-card">
         <div
           v-show="planetar"
           id="planetar"

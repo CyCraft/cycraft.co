@@ -94,7 +94,7 @@
       </div>
       <!-- Magnetar Card -->
       <transition
-        name="fade-framework-line"
+        name="fade-framework-card"
         mode="out-in"
       >
         <div
@@ -149,7 +149,7 @@
       </div>
       <!-- Blitzar Card -->
       <transition
-        name="fade-framework-line"
+        name="fade-framework-card"
         mode="out-in"
       >
         <div
@@ -202,7 +202,7 @@
       </div>
       <!-- Planetar Card -->
       <transition
-        name="fade-framework-line"
+        name="fade-framework-card"
         mode="out-in"
       >
         <div
@@ -229,15 +229,15 @@
 </template>
 
 <style lang="sass" scoped>
-.fade-framework-line-enter-active
+.fade-framework-card-enter-active
   transition: all 1.5s ease
   transition-delay: 0.7s
 
-.fade-framework-line-leave-active
+.fade-framework-card-leave-active
   transition: all 0.3s ease // also update FADE_OUT_MS
 
-.fade-framework-line-enter,
-.fade-framework-line-leave-to
+.fade-framework-card-enter,
+.fade-framework-card-leave-to
   opacity: 0
 
 ._mbp-logos-wrapper

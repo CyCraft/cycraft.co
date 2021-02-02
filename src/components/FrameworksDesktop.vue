@@ -139,15 +139,14 @@
               style="padding-right: 90px"
             >
               <svg
-                width="2"
-                height="208"
-                viewBox="0 0 2 208"
+                height="140"
+                viewBox="0 0 2 140"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   id="blitzar-line"
-                  d="M0.5 0.5V415.5"
+                  d="M0.5 0.5V140.5"
                   stroke="white"
                   stroke-width="2"
                 />

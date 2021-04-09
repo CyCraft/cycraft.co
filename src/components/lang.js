@@ -56,23 +56,23 @@ export const lang = {
       'Your data, where you want.\n\nThis framework-agnostic syncing solution can automatically connect to any DB or API and keep your data organised for you in a local data store. Plus, it’s got optimistic-UI built right in.',
   },
   descriptionBlitzar: {
-    ja: 'Blitzarは、VueJSで高速プロトタイピングを可能にする柔軟なコンポーネントコレクションです。',
+    ja:
+      'BlitzarはVueJSのフォームとデータテーブルを簡単なJSONのようなシンタックスで生成可能にする。',
     en:
-      'Blitzar is a flexible component collection allowing for blitzing fast prototyping with VueJS.',
+      'Blitzar gives you the power to generate Vue Forms and Data-tables fast with a simple JSON-like syntax.',
   },
   descriptionPlanetarShort: {
-    ja:
-      'Planetarは、リアルタイムに反映されるスタイルガイドを自動生成する軽快なVueフレームワークです。',
+    ja: 'リアルタイムに反映されるスタイルガイドを自動生成する軽快なVueフレームワークです。',
     en: 'This nimble Vue framework creates an auto-generated, living style guide.',
   },
   descriptionMagnetarShort: {
     ja:
-      'Magnetarは、フレームワークに依存しない同期ソリューションであり、任意のデータベースまたはAPIに連携し、データが簡単に取得・整理・編集可能になります。',
-    en: 'Magnetar is a framework-agnostic syncing solution that keeps your data where you need it.',
+      'フレームワークに依存しない同期ソリューションであり、任意のデータベースまたはAPIに連携し、データが簡単に取得・整理・編集可能になります。',
+    en: 'A framework-agnostic syncing solution that keeps your data where you need it.',
   },
   descriptionBlitzarShort: {
-    ja: 'Blitzarは、VueJSで高速プロトタイピングを可能にする柔軟なコンポーネントコレクションです。',
-    en: 'A flexible component collection allowing for blitzing fast prototyping with VueJS.',
+    ja: 'VueJSのフォームとデータテーブルを簡単なJSONのようなシンタックスで生成可能にする。',
+    en: 'Generate Vue Forms and Data-tables fast with a simple JSON-like syntax.',
   },
   howWeDesign: {
     ja: 'How we design',

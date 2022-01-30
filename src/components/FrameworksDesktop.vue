@@ -1,53 +1,112 @@
 <template>
   <div>
+    <!-- Framework Logos -->
     <div class="_mbp-logos-wrapper">
       <div class="_mbp-logos-horizontal">
-        <!-- Magnetar -->
+        <!-- Magnetar Logo -->
         <div
           class="flex flex-col items-center cursor-pointer place-self-start"
           @click="setMagnetar"
         >
-          <img src="/frameworks/magnetar-logo-white.svg" alt="magnetar-logo" :draggable="false" />
-          <img class="mt-6" src="/frameworks/magnetar-name.svg" alt="magnetar" :draggable="false" />
+          <img
+            src="/frameworks/magnetar-logo-white.svg"
+            alt="magnetar-logo"
+            :draggable="false"
+          />
+          <img
+            class="mt-6"
+            src="/frameworks/magnetar-name.svg"
+            alt="magnetar"
+            :draggable="false"
+          />
         </div>
 
-        <!-- Blitzar -->
+        <!-- Blitzar Logo -->
         <div
           class="flex flex-col items-center cursor-pointer place-self-center"
           @click="setBlitzar"
         >
-          <img src="/frameworks/blitzar-logo-white.svg" alt="blitzar-logo" :draggable="false" />
-          <img class="mt-6" src="/frameworks/blitzar-name.svg" alt="blitzar" :draggable="false" />
+          <img
+            src="/frameworks/blitzar-logo-white.svg"
+            alt="blitzar-logo"
+            :draggable="false"
+          />
+          <img
+            class="mt-6"
+            src="/frameworks/blitzar-name.svg"
+            alt="blitzar"
+            :draggable="false"
+          />
         </div>
 
-        <!-- Planetar -->
-        <div class="flex flex-col items-center cursor-pointer place-self-end" @click="setPlanetar">
-          <img src="/frameworks/planetar-logo-white.svg" alt="planetar-logo" :draggable="false" />
-          <img class="mt-6" src="/frameworks/planetar-name.svg" alt="planetar" :draggable="false" />
+        <!-- Planetar Logo -->
+        <div
+          class="flex flex-col items-center cursor-pointer place-self-end"
+          @click="setPlanetar"
+        >
+          <img
+            src="/frameworks/planetar-logo-white.svg"
+            alt="planetar-logo"
+            :draggable="false"
+          />
+          <img
+            class="mt-6"
+            src="/frameworks/planetar-name.svg"
+            alt="planetar"
+            :draggable="false"
+          />
         </div>
       </div>
     </div>
 
-    <div style="min-height: 480px" class="mt-6">
+    <!-- Framework Lines and Cards -->
+    <div
+      style="min-height: 480px"
+      class="mt-6"
+    >
+      <!-- Magnetar Line -->
       <transition name="fade-framework-line">
-        <div v-show="magnetar" id="magnetar">
+        <div
+          v-show="magnetar"
+          id="magnetar"
+        >
           <div class="flex flex-row">
-            <div class="w-1/2 flex flex-row" style="padding-left: 107px">
+            <div
+              class="w-1/2 flex flex-row"
+              style="padding-left: 107px"
+            >
               <svg
                 style="flex: 1"
-                width="432"
-                viewBox="0 0 432 211"
+                width="433"
+                viewBox="0 0 433 211"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path id="magnetar-line" d="M431 211V121.5H1V0.5" stroke="white" />
+                <path
+                  id="magnetar-line"
+                  d="M1.5 0V120H431.5V210.5"
+                  stroke="white"
+                  stroke-width="2"
+                />
               </svg>
+
             </div>
           </div>
+        </div>
+      </transition>
+      <!-- Magnetar Card -->
+      <transition name="fade-framework-card">
+        <div
+          v-show="magnetar"
+          id="magnetar"
+        >
           <div class="w-1/2"></div>
 
           <div class="flex flex-row justify-center">
-            <div class="flex flex-col justify-center" style="width: 250px">
+            <div
+              class="flex flex-col justify-center"
+              style="width: 250px"
+            >
               <FrameworkCard
                 title="magnetar"
                 textUrl="magnetar.cycraft.co"
@@ -58,25 +117,47 @@
           </div>
         </div>
       </transition>
-
+      <!-- Blitzar Line -->
       <transition name="fade-framework-line">
-        <div v-show="blitzar" id="blitzar">
+        <div
+          v-show="blitzar"
+          id="blitzar"
+        >
           <div class="flex flex-row">
             <div class="w-1/2"></div>
-            <div class="w-1/2 flex flex-row" style="padding-right: 90px">
+            <div
+              class="w-1/2 flex flex-row"
+              style="padding-right: 90px"
+            >
               <svg
-                width="2"
-                height="208"
-                viewBox="0 0 2 208"
+                height="140"
+                viewBox="0 0 2 140"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path id="blitzar-line" d="M1 208V0" stroke="white" />
+                <path
+                  id="blitzar-line"
+                  d="M0.5 0.5V140.5"
+                  stroke="white"
+                  stroke-width="2"
+                />
               </svg>
+
             </div>
           </div>
+        </div>
+      </transition>
+      <!-- Blitzar Card -->
+      <transition name="fade-framework-card">
+        <div
+          v-show="blitzar"
+          id="blitzar"
+        >
           <div class="flex flex-row justify-center">
-            <div class="flex flex-col justify-center" style="width: 250px">
+            <div
+              class="flex flex-col justify-center"
+              style="width: 250px"
+            >
               <FrameworkCard
                 title="blitzar"
                 textUrl="blitzar.cycraft.co"
@@ -87,24 +168,48 @@
           </div>
         </div>
       </transition>
+      <!-- Planetar Line -->
       <transition name="fade-framework-line">
-        <div v-show="planetar" id="planetar">
+        <div
+          v-show="planetar"
+          id="planetar"
+        >
           <div class="flex flex-row">
             <div class="w-1/2"></div>
-            <div class="w-1/2 flex flex-row" style="padding-right: 115px">
+            <div
+              class="w-1/2 flex flex-row"
+              style="padding-right: 115px"
+            >
               <svg
                 style="flex: 1"
-                width="449"
-                viewBox="0 0 449 211"
+                width="450"
+                viewBox="0 0 450 211"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path id="planetar-line" d="M1 211V121.5H448.5V0.5" stroke="white" />
+                <path
+                  id="planetar-line"
+                  d="M449 0V120H1V212.5"
+                  stroke="white"
+                  stroke-width="2"
+                />
               </svg>
+
             </div>
           </div>
+        </div>
+      </transition>
+      <!-- Planetar Card -->
+      <transition name="fade-framework-card">
+        <div
+          v-show="planetar"
+          id="planetar"
+        >
           <div class="flex flex-row justify-center">
-            <div class="flex flex-col justify-center" style="width: 250px">
+            <div
+              class="flex flex-col justify-center"
+              style="width: 250px"
+            >
               <FrameworkCard
                 title="planetar"
                 textUrl="planetar.cyraft.co"
@@ -120,14 +225,20 @@
 </template>
 
 <style lang="sass" scoped>
-.fade-framework-line-enter-active
-  transition: all 1.5s ease
-
 .fade-framework-line-leave-active
+  transition: all 0.3s ease // also update FADE_OUT_MS and .fade-framework-card-leave-active
+.fade-framework-line-leave-to
+  opacity: 0
+
+.fade-framework-card-enter-active
+  transition: all 1.5s ease
+  transition-delay: 0.7s
+
+.fade-framework-card-leave-active
   transition: all 0.3s ease // also update FADE_OUT_MS
 
-.fade-framework-line-enter,
-.fade-framework-line-leave-to
+.fade-framework-card-enter,
+.fade-framework-card-leave-to
   opacity: 0
 
 ._mbp-logos-wrapper
@@ -181,25 +292,25 @@ export default {
     },
     setPlanetar() {
       this.resetAnimation()
-      this.animateLineId = 'planetar-line'
       this.animationTimeout = setTimeout(() => {
         this.planetar = true
+        this.animateLineId = 'planetar-line'
         this.animateLine()
       }, FADE_OUT_MS)
     },
     setMagnetar() {
       this.resetAnimation()
-      this.animateLineId = 'magnetar-line'
       this.animationTimeout = setTimeout(() => {
         this.magnetar = true
+        this.animateLineId = 'magnetar-line'
         this.animateLine()
       }, FADE_OUT_MS)
     },
     setBlitzar() {
       this.resetAnimation()
-      this.animateLineId = 'blitzar-line'
       this.animationTimeout = setTimeout(() => {
         this.blitzar = true
+        this.animateLineId = 'blitzar-line'
         this.animateLine()
       }, FADE_OUT_MS)
     },

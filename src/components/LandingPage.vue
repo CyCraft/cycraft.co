@@ -73,9 +73,23 @@
         <!-- Project Grid -->
         <div class="grid gap-10 md:gap-20 grid-cols-1">
           <CyProject
+            title="Let's Play Apps"
+            img="/projects/letsplayseries.jpg"
+            url="https://craftingtable.studio"
+            linkText="craftingtable.studio"
+            :description="txt.descriptionLetsPlay"
+          />
+          <CyProject
+            title="Colorful Casting"
+            img="/projects/colorfulcasting.png"
+            url="https://colorfulcast.com"
+            linkText="colorfulcast.com"
+            :description="txt.descriptionColorfulCasting"
+          />
+          <CyProject
             title="Pepicons"
             img="/projects/pepicons.png"
-            url="https://pepicons.com/"
+            url="https://pepicons.com"
             linkText="pepicons.com"
             :description="txt.descriptionPepicons"
           />
@@ -168,7 +182,7 @@
       </div>
       <!-- About Us -->
       <div class="mx-6 mt-72">
-        <div class="text-h2">{{ txt.chapterAboutUs }}</div>
+        <!-- <div class="text-h2">{{ txt.chapterAboutUs }}</div> -->
         <AboutUsSection
           imgPosition="left"
           :bio="txt.bioLuca"
@@ -177,13 +191,13 @@
           twitter="mesqueeb"
           photoUrl="/photos/LB.jpg"
         />
-        <AboutUsSection
+        <!-- <AboutUsSection
           imgPosition="right"
           :bio="txt.bioTadaki"
           :name="txt.nameTadaki"
           github="tdk0718"
           photoUrl="/photos/TM.jpg"
-        />
+        /> -->
       </div>
       <!-- Contact Us logo -->
       <div class="mx-10 mt-48 sm:mt-72 pb-8 flex flex-col items-center">

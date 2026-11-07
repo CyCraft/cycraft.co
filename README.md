@@ -30,6 +30,6 @@ npm run dev
 
 ## Analytics and deployment
 
-`public/analytics.js` loads PostHog only on `cycraft.co` and `www.cycraft.co`, using cookieless pageview tracking without browser persistence, person profiles, autocapture or session recording. Set its `projectToken` to the CyCraft project's public token and enable cookieless tracking under that project's Web analytics settings. An empty token disables analytics, including loading the SDK.
+`public/analytics.js` loads PostHog only on `cycraft.co` and `www.cycraft.co`, using cookieless pageview tracking without browser persistence, person profiles, autocapture or session recording. It uses the [CyCraft PostHog project](https://us.posthog.com/project/718690/home), where cookieless tracking is enabled. An empty token disables analytics, including loading the SDK.
 
 Deployment is manual; this repository has no GitHub Actions deployment workflow. Run `NODE_OPTIONS=--openssl-legacy-provider npm run build`, then `firebase deploy --only hosting --project cycraft-co --account mesqueeb@gmail.com`. The build prerenders into `.presite`, which Firebase Hosting serves. Use this explicit Hosting command instead of `npm run deploy`, whose script also stages and commits all working tree changes.

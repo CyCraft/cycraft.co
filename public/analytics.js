@@ -1,6 +1,5 @@
 ;(function () {
-  // Set the public project token after creating this site's PostHog project.
-  var projectToken = ''
+  var projectToken = 'phc_vZm2H3zruqY4BMJFEuW546DQe7LkxK4tuw6Hhu9Srr4q'
   var productionHosts = ['cycraft.co', 'www.cycraft.co']
   if (!projectToken || productionHosts.indexOf(window.location.hostname) === -1) return
 

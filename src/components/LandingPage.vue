@@ -89,8 +89,8 @@
           <CyProject
             title="Pepicons"
             img="/projects/pepicons.png"
-            url="https://pepicons.com"
-            linkText="pepicons.com"
+            url="https://pepicons.cycraft.co"
+            linkText="pepicons.cycraft.co"
             :description="txt.descriptionPepicons"
           />
           <CyProject

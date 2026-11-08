@@ -1,0 +1,39 @@
+{
+  "contact": [
+    "mailto:security@cycraft.co"
+  ],
+  "expires": "2027-11-01T00:00:00Z",
+  "preferred_languages": "en",
+  "enabled": true,
+  "zones": {
+    "mesqueebzone": [
+      "cycraft.co",
+      "laboiteouverte.com",
+      "lucaban.com",
+      "pepicons.com"
+    ],
+    "EverTable": [
+      "craftingtable.studio",
+      "evertable.app"
+    ]
+  },
+  "redirect_exceptions": {
+    "laboiteouverte.com": "/.well-known/security.txt",
+    "craftingtable.studio": "/.well-known/security.txt"
+  },
+  "parked_worker": {
+    "name": "lucaban-parking",
+    "source": "lucaban-parking.mjs",
+    "compatibility_date": "2026-11-08",
+    "routes": [
+      "lucaban.com/*",
+      "www.lucaban.com/*"
+    ],
+    "proxied_hosts": [
+      "lucaban.com",
+      "www.lucaban.com"
+    ],
+    "min_tls_version": "1.2",
+    "always_use_https": "on"
+  }
+}

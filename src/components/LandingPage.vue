@@ -96,8 +96,8 @@
           <CyProject
             title="CineMatch"
             img="/projects/cinematch.png"
-            url="https://cine-match.com"
-            linkText="cine-match.com"
+            url="https://cinematch.cycraft.co"
+            linkText="cinematch.cycraft.co"
             :description="txt.descriptionCM"
           />
         </div>

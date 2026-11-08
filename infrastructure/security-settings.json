@@ -1,0 +1,115 @@
+{
+  "zones": {
+    "cycraft.co": {
+      "zone_id": "4b2ec8432459361cd3330259966728fa",
+      "settings": {
+        "always_use_https": "on",
+        "min_tls_version": "1.2",
+        "security_header": {
+          "strict_transport_security": {
+            "enabled": true,
+            "max_age": 15552000,
+            "include_subdomains": false,
+            "preload": false,
+            "nosniff": true
+          }
+        },
+        "ssl": "strict"
+      },
+      "bot_management": {
+        "fight_mode": false,
+        "crawler_protection": "enabled"
+      }
+    },
+    "laboiteouverte.com": {
+      "zone_id": "9e320fe627021452c49fea71a8449d92",
+      "settings": {
+        "always_use_https": "on",
+        "min_tls_version": "1.2",
+        "security_header": {
+          "strict_transport_security": {
+            "enabled": true,
+            "max_age": 15552000,
+            "include_subdomains": false,
+            "preload": false,
+            "nosniff": true
+          }
+        },
+        "ssl": "strict"
+      },
+      "bot_management": {
+        "fight_mode": false,
+        "crawler_protection": "enabled"
+      }
+    },
+    "lucaban.com": {
+      "zone_id": "c9199c424c4e10646dbcd3f072a029e0",
+      "settings": {
+        "always_use_https": "on",
+        "min_tls_version": "1.2",
+        "security_header": {
+          "strict_transport_security": {
+            "enabled": true,
+            "max_age": 15552000,
+            "include_subdomains": false,
+            "preload": false,
+            "nosniff": true
+          }
+        },
+        "ssl": "strict"
+      },
+      "bot_management": {
+        "fight_mode": false,
+        "crawler_protection": "enabled"
+      }
+    },
+    "craftingtable.studio": {
+      "zone_id": "d90ca3517f52fbad3702ebb182abc2eb",
+      "settings": {
+        "always_use_https": "on",
+        "min_tls_version": "1.2",
+        "security_header": {
+          "strict_transport_security": {
+            "enabled": true,
+            "max_age": 15552000,
+            "include_subdomains": false,
+            "preload": false,
+            "nosniff": true
+          }
+        },
+        "ssl": "strict"
+      },
+      "bot_management": {
+        "fight_mode": false,
+        "crawler_protection": "enabled"
+      }
+    },
+    "evertable.app": {
+      "zone_id": "36e0c2b966777d16f299e5452d75bdf3",
+      "settings": {
+        "always_use_https": "on",
+        "min_tls_version": "1.2",
+        "security_header": {
+          "strict_transport_security": {
+            "enabled": true,
+            "max_age": 15552000,
+            "include_subdomains": false,
+            "preload": false,
+            "nosniff": true
+          }
+        },
+        "ssl": "strict"
+      },
+      "bot_management": {
+        "fight_mode": false,
+        "crawler_protection": "enabled"
+      }
+    }
+  },
+  "deferred_recommendations": {
+    "bot_fight_mode": "Can challenge legitimate automated clients, including mail-policy retrieval; free Bot Fight Mode has no per-path exceptions.",
+    "firebase_proxying": "Keep established DNS-only Firebase custom domains unchanged until certificate renewal and custom-domain validation compatibility are established.",
+    "dmarc": "Domain migrations owns email DNS. Keep monitoring until Lucaban outbound alignment, the complete sender inventory, and failure monitoring are verified.",
+    "polish": "Unavailable on the current Free plans; no paid upgrade authorized."
+  }
+}
